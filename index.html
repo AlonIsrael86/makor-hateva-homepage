@@ -10,7 +10,6 @@
 <link rel="alternate" hreflang="he-IL" href="https://www.makorhateva.com/" />
 <link rel="icon" type="image/png" href="assets/logo.png" />
 
-<!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="he_IL" />
 <meta property="og:site_name" content="מקור הטבע" />
@@ -40,19 +39,9 @@
   "email": "makorhateva1@gmail.com",
   "foundingDate": "1963",
   "image": "https://www.makorhateva.com/assets/hero.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "עוזיאל 63",
-    "addressLocality": "רמת גן",
-    "addressCountry": "IL"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "עוזיאל 63", "addressLocality": "רמת גן", "addressCountry": "IL" },
   "areaServed": { "@type": "Place", "name": "מרכז הארץ" },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
-    "opens": "08:00",
-    "closes": "17:00"
-  }],
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "17:00" }],
   "knowsAbout": ["מערכות סולאריות מרכזיות","דודי שמש","קולטי שמש","חימום מים סולארי","תחזוקת מערכות סולאריות"]
 }
 </script>
@@ -73,271 +62,273 @@
 
 <style>
   :root{
-    --navy:#002F5E; --navy-deep:#001E3D; --navy-700:#0A3A6B;
-    --blue:#0077C0; --orange:#FF6000; --orange-deep:#C00000; --amber:#F7B733;
-    --surface:#F6F8FA; --surface-2:#EEF2F6; --ink:#12202B; --muted:#5A6B7B;
-    --line:#DCE3EA; --white:#ffffff;
-    --shadow-sm:0 2px 8px rgba(8,30,55,.08);
-    --shadow-md:0 12px 36px rgba(8,30,55,.14);
-    --shadow-lg:0 24px 60px rgba(8,30,55,.22);
-    --r:12px; --r-sm:8px;
-    --container:1200px;
-    --pad-inline:clamp(16px,5vw,64px);
-    --header-h:80px;
-    --font-display:"Frank Ruhl Libre",serif;
-    --font-body:"Assistant",-apple-system,"Segoe UI",sans-serif;
+    --navy:#002F5E; --navy-deep:#001B38; --navy-700:#0A3A6B;
+    --blue:#0077C0; --orange:#FF6000; --orange-deep:#C00000; --amber:#FFB23E;
+    --surface:#F6F8FB; --surface-2:#EAF0F6; --ink:#0E1C28; --muted:#586a7a;
+    --line:#DBE3EC; --white:#fff;
+    --shadow-sm:0 2px 10px rgba(8,30,55,.07);
+    --shadow-md:0 16px 44px rgba(8,30,55,.13);
+    --shadow-lg:0 30px 70px rgba(6,24,48,.26);
+    --r:14px; --r-sm:10px; --container:1220px;
+    --pad-inline:clamp(18px,5vw,68px);
+    --header-h:84px;
+    --display:"Frank Ruhl Libre",serif; --body:"Assistant",-apple-system,"Segoe UI",sans-serif;
   }
   *,*::before,*::after{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   html,body{overflow-x:clip;max-width:100%}
-  body{
-    margin:0;font-family:var(--font-body);color:var(--ink);background:var(--white);
-    font-size:18px;line-height:1.65;font-weight:400;letter-spacing:0;
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  }
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);font-size:18px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;position:relative}
+  body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   img{max-width:100%;height:auto;display:block}
   a{color:inherit;text-decoration:none}
-  h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:800;line-height:1.18;letter-spacing:-.01em;text-wrap:balance}
+  h1,h2,h3,h4{margin:0;font-family:var(--display);font-weight:800;line-height:1.14;letter-spacing:-.015em;text-wrap:balance}
   p{margin:0;text-wrap:pretty}
   ul{margin:0;padding:0;list-style:none}
   :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
   .container{max-width:var(--container);margin-inline:auto;padding-inline:var(--pad-inline)}
-  .eyebrow{font-family:var(--font-body);font-weight:700;font-size:.86rem;letter-spacing:.02em;color:var(--orange);
-    display:inline-flex;align-items:center;gap:10px}
-  .eyebrow::before{content:"";width:28px;height:2px;background:var(--orange);display:inline-block;border-radius:2px}
-  .eyebrow.on-dark{color:var(--amber)}.eyebrow.on-dark::before{background:var(--amber)}
   .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-body);
-    font-weight:700;font-size:1rem;padding:15px 26px;border-radius:999px;cursor:pointer;border:2px solid transparent;
-    transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;white-space:nowrap;min-height:52px}
-  .btn svg{width:18px;height:18px;flex:none}
-  .btn-primary{background:linear-gradient(135deg,var(--orange),var(--orange-deep));color:#fff;box-shadow:0 10px 26px rgba(255,96,0,.34)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,96,0,.42)}
-  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}
-  .btn-ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
-  .btn-outline{background:#fff;color:var(--navy);border-color:var(--line)}
-  .btn-outline:hover{border-color:var(--navy);transform:translateY(-2px)}
-  .section{padding-block:clamp(56px,8vw,104px)}
-  .section-head{max-width:680px;margin-bottom:clamp(32px,5vw,56px)}
-  .section-head h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-top:14px;color:var(--navy)}
-  .section-head p{margin-top:16px;color:var(--muted);font-size:1.08rem}
-  .on-dark .section-head h2{color:#fff}.on-dark .section-head p{color:rgba(255,255,255,.78)}
+  .eyebrow{font-family:var(--body);font-weight:700;font-size:.84rem;letter-spacing:.06em;color:var(--orange);
+    display:inline-flex;align-items:center;gap:11px}
+  .eyebrow::before{content:"";width:30px;height:2px;background:linear-gradient(90deg,var(--orange),var(--amber));border-radius:2px}
+  .eyebrow.dark{color:var(--amber)}.eyebrow.dark::before{background:linear-gradient(90deg,var(--amber),rgba(255,255,255,.4))}
+  .eyebrow.center{justify-content:center}
 
-  /* skip link */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;
+    font-size:1rem;padding:16px 28px;border-radius:999px;cursor:pointer;border:2px solid transparent;
+    transition:transform .2s ease,box-shadow .2s ease,background .2s,color .2s;white-space:nowrap;min-height:54px;position:relative;overflow:hidden}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-primary{background:linear-gradient(135deg,#FF7A1A,var(--orange) 45%,var(--orange-deep));color:#fff;box-shadow:0 12px 30px rgba(255,96,0,.36)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(255,96,0,.46)}
+  .btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35),transparent 70%);transform:translateX(-120%);transition:transform .6s}
+  .btn-primary:hover::after{transform:translateX(120%)}
+  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.45);backdrop-filter:blur(4px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+
+  .section{padding-block:clamp(64px,8.5vw,116px);position:relative}
+  .section-head{max-width:700px;margin-bottom:clamp(36px,5vw,60px)}
+  .section-head h2{font-size:clamp(2rem,4.6vw,3.3rem);margin-top:16px;color:var(--navy);font-weight:900}
+  .section-head p{margin-top:18px;color:var(--muted);font-size:1.12rem}
+  .on-dark .section-head h2{color:#fff}.on-dark .section-head p{color:rgba(255,255,255,.8)}
+  .glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+  .section>.container{position:relative;z-index:1}
+
   .skip{position:absolute;inset-inline-start:16px;top:-60px;background:#fff;color:var(--navy);padding:10px 16px;border-radius:8px;z-index:1000;transition:top .2s}
   .skip:focus{top:12px}
 
-  /* ===== Header ===== */
-  .site-header{position:fixed;inset-block-start:0;inset-inline:0;z-index:90;height:var(--header-h);
-    display:flex;align-items:center;transition:background .3s ease,box-shadow .3s ease,height .3s ease}
-  .site-header::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,18,38,.55),rgba(0,18,38,0));pointer-events:none;transition:opacity .3s;z-index:-1}
-  .site-header.scrolled{background:rgba(0,30,61,.97);box-shadow:0 8px 30px rgba(0,18,40,.28);height:68px;backdrop-filter:blur(8px)}
-  .site-header.scrolled::before{opacity:0}
+  /* Header */
+  .site-header{position:fixed;inset-block-start:0;inset-inline:0;z-index:90;height:var(--header-h);display:flex;align-items:center;
+    background:linear-gradient(to bottom,rgba(0,20,42,.62),rgba(0,20,42,.14));backdrop-filter:blur(10px) saturate(1.1);
+    -webkit-backdrop-filter:blur(10px) saturate(1.1);border-block-end:1px solid rgba(255,255,255,.08);transition:background .3s,height .3s,box-shadow .3s}
+  .site-header.scrolled{background:rgba(0,27,56,.96);box-shadow:0 10px 34px rgba(0,16,38,.34);height:70px}
   .header-inner{display:flex;align-items:center;gap:20px;width:100%}
-  .brand{display:flex;align-items:center;flex:none;margin-inline-start:auto}
-  .brand img{height:46px;width:auto}
-  .site-header.scrolled .brand img{height:40px}
-  .nav{display:flex;align-items:center;gap:6px}
-  .nav a{color:#fff;font-weight:600;font-size:.98rem;padding:10px 14px;border-radius:8px;transition:background .2s,color .2s}
-  .nav a:hover{background:rgba(255,255,255,.12)}
+  .brand{display:flex;align-items:center;flex:none;margin-inline-start:auto;filter:drop-shadow(0 2px 6px rgba(0,12,28,.5))}
+  .brand img{height:50px;width:auto}
+  .site-header.scrolled .brand img{height:42px}
+  .nav{display:flex;align-items:center;gap:4px}
+  .nav a{color:#fff;font-weight:600;font-size:.98rem;padding:10px 14px;border-radius:8px;transition:background .2s;position:relative}
+  .nav a::after{content:"";position:absolute;inset-block-end:4px;inset-inline:14px;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:right;transition:transform .25s}
+  .nav a:hover{background:rgba(255,255,255,.1)}
+  .nav a:hover::after{transform:scaleX(1)}
   .header-cta{display:flex;align-items:center;gap:14px;flex:none}
   .header-phone{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700}
   .header-phone svg{width:17px;height:17px;color:var(--amber)}
   .header-cta .btn{padding:11px 20px;min-height:44px;font-size:.95rem}
-  .hamburger{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px;width:46px;height:46px}
-  .hamburger svg{width:28px;height:28px}
+  .hamburger{display:none;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#fff;cursor:pointer;padding:8px;width:46px;height:46px}
+  .hamburger svg{width:26px;height:26px}
 
-  /* ===== Hero ===== */
+  /* Hero */
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;isolation:isolate}
-  .hero__bg{position:absolute;inset:0;z-index:-2}
-  .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center}
-  .hero__scrim{position:absolute;inset:0;z-index:-1;
-    background:
-      linear-gradient(to left,rgba(0,21,43,.93) 0%,rgba(0,24,48,.82) 30%,rgba(0,28,56,.5) 60%,rgba(0,30,61,.28) 100%),
-      linear-gradient(to bottom,rgba(0,18,38,.55) 0%,rgba(0,18,38,0) 22%,rgba(0,18,38,0) 60%,rgba(0,18,38,.6) 100%)}
-  .hero .container{width:100%;padding-block:calc(var(--header-h) + 28px) 96px}
-  .hero__inner{max-width:680px;margin-inline-start:0}
-  .hero__eyebrow{font-weight:700;color:var(--amber);font-size:.92rem;letter-spacing:.01em;
-    display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
-  .hero__eyebrow::before{content:"";width:30px;height:2px;background:var(--amber);border-radius:2px}
-  .hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.08;
-    letter-spacing:-.02em;text-shadow:0 2px 24px rgba(0,12,28,.4)}
+  .hero__bg{position:absolute;inset:0;z-index:-3}
+  .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero__scrim{position:absolute;inset:0;z-index:-2;background:
+    linear-gradient(to left,rgba(0,17,36,.95) 0%,rgba(0,21,44,.84) 32%,rgba(0,26,52,.5) 62%,rgba(0,28,58,.24) 100%),
+    radial-gradient(120% 80% at 18% 22%,rgba(255,138,30,.18),transparent 55%),
+    linear-gradient(to bottom,rgba(0,16,34,.5) 0%,transparent 24%,transparent 58%,rgba(0,14,30,.7) 100%)}
+  .hero__sun{position:absolute;z-index:-1;inset-inline-end:6%;inset-block-start:14%;width:clamp(128px,14vw,200px);aspect-ratio:1;pointer-events:none;opacity:.82}
+  .hero__sun .lot{position:absolute;inset:-44%;opacity:.5}
+  .hero__sun .disc{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#FFE9BE,#FFB23E 56%,#FF7A1A 90%);box-shadow:0 0 38px rgba(255,165,55,.42),0 0 96px rgba(255,140,40,.28)}
+  .hero__sun .rays{position:absolute;inset:0;animation:spin 70s linear infinite}
+  .hero__sun .rays span{position:absolute;inset-inline-start:50%;inset-block-start:50%;width:3px;height:50%;background:linear-gradient(to top,transparent,rgba(255,200,110,0) 36%,rgba(255,200,110,.4));transform-origin:bottom center;border-radius:3px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero .container{width:100%;padding-block:calc(var(--header-h) + 30px) 92px}
+  .hero__inner{max-width:660px;margin-inline-start:0}
+  .hero__eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--amber);font-size:.92rem;letter-spacing:.03em;
+    margin-bottom:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:999px;backdrop-filter:blur(6px)}
+  .hero__eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+  .hero h1{font-family:var(--display);font-weight:900;font-size:clamp(2.7rem,6.6vw,5rem);line-height:1.04;letter-spacing:-.025em;text-shadow:0 4px 30px rgba(0,10,26,.45)}
   .hero h1 span{display:block}
-  .hero h1 .accent{color:var(--amber)}
-  .hero__sub{margin-top:22px;font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:560px;color:rgba(255,255,255,.92);line-height:1.7}
-  .hero__actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
-  .hero__stats{margin-top:44px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2);
-    display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,48px)}
-  .hero__stats .stat{min-width:88px}
-  .hero__stats .num{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.1rem);color:#fff;line-height:1;direction:ltr;unicode-bidi:isolate}
-  .hero__stats .lbl{margin-top:6px;font-size:.86rem;color:rgba(255,255,255,.74);font-weight:500}
-  .hero__badge{position:absolute;inset-block-end:30px;inset-inline-start:clamp(98px,8vw,120px);z-index:2;
-    display:flex;align-items:center;gap:14px;background:rgba(0,20,40,.55);backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow-md)}
-  .hero__badge .yr{font-family:var(--font-display);font-weight:800;font-size:2rem;color:var(--amber);line-height:1}
-  .hero__badge .txt{font-size:.82rem;color:rgba(255,255,255,.86);font-weight:600;max-width:140px;line-height:1.35}
-  .scroll-cue{position:absolute;inset-block-end:26px;inset-inline:0;margin-inline:auto;width:max-content;z-index:2;
-    display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:.78rem;font-weight:600}
-  .scroll-cue .mouse{width:26px;height:42px;border:2px solid rgba(255,255,255,.6);border-radius:14px;position:relative}
-  .scroll-cue .mouse::after{content:"";position:absolute;inset-block-start:7px;inset-inline:0;margin-inline:auto;
-    width:4px;height:8px;border-radius:3px;background:#fff;animation:wheel 1.8s ease-in-out infinite}
+  .hero h1 .accent{background:linear-gradient(100deg,#FFD27A,var(--amber) 55%,#FF7A1A);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero__sub{margin-top:24px;font-size:clamp(1.08rem,1.5vw,1.3rem);max-width:560px;color:rgba(255,255,255,.93);line-height:1.7}
+  .hero__actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+  .hero__stats{margin-top:46px;display:flex;flex-wrap:wrap;align-items:stretch;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;backdrop-filter:blur(8px);overflow:hidden;max-width:640px}
+  .hero__stats .stat{flex:1 1 0;min-width:120px;padding:18px 20px;text-align:center;border-inline-start:1px solid rgba(255,255,255,.13)}
+  .hero__stats .stat:first-child{border-inline-start:0}
+  .hero__stats .num{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.3vw,2rem);color:var(--amber);line-height:1;direction:ltr;unicode-bidi:isolate}
+  .hero__stats .lbl{margin-top:8px;font-size:.84rem;color:rgba(255,255,255,.78);font-weight:600;line-height:1.3}
+  .hero__seal{position:absolute;inset-block-end:34px;inset-inline-start:clamp(18px,5vw,68px);z-index:2;width:128px;height:128px;display:grid;place-items:center;border-radius:50%;color:#fff;
+    background:radial-gradient(circle at 50% 40%,rgba(10,40,76,.85),rgba(0,18,40,.92));border:1px solid rgba(255,255,255,.22);box-shadow:var(--shadow-md),inset 0 0 0 6px rgba(255,255,255,.05);backdrop-filter:blur(8px)}
+  .hero__seal .ring{position:absolute;inset:6px;border-radius:50%;border:1px dashed rgba(255,178,62,.5);animation:spin 40s linear infinite}
+  .hero__seal .yr{font-family:var(--display);font-weight:900;font-size:2rem;color:var(--amber);line-height:1}
+  .hero__seal .sub{font-size:.62rem;letter-spacing:.14em;color:rgba(255,255,255,.78);font-weight:700;margin-top:3px}
+  .scroll-cue{position:absolute;inset-block-end:24px;inset-inline:0;margin-inline:auto;width:max-content;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:.76rem;font-weight:600}
+  .scroll-cue .mouse{width:25px;height:40px;border:2px solid rgba(255,255,255,.6);border-radius:14px;position:relative}
+  .scroll-cue .mouse::after{content:"";position:absolute;inset-block-start:7px;inset-inline:0;margin-inline:auto;width:4px;height:8px;border-radius:3px;background:#fff;animation:wheel 1.8s ease-in-out infinite}
   @keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}60%{opacity:1;transform:translateY(10px)}100%{opacity:0;transform:translateY(12px)}}
 
-  /* ===== Trust strip ===== */
-  .trust{background:var(--surface);border-block:1px solid var(--line)}
-  .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,44px);flex-wrap:wrap;padding-block:24px}
-  .trust__label{font-weight:700;color:var(--navy);font-size:.98rem;flex:none}
-  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(14px,3vw,38px);align-items:center}
-  .trust__logos span{font-family:var(--font-display);font-weight:700;color:var(--muted);font-size:1.15rem;opacity:.8}
+  /* Trust */
+  .trust{background:var(--navy-deep);color:#fff;border-block-end:1px solid rgba(255,255,255,.06)}
+  .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,46px);flex-wrap:wrap;padding-block:26px}
+  .trust__label{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9);flex:none;display:flex;align-items:center;gap:10px}
+  .trust__label svg{width:20px;height:20px;color:var(--amber)}
+  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(14px,3vw,40px);align-items:center}
+  .trust__logos span{font-family:var(--display);font-weight:700;color:rgba(255,255,255,.62);font-size:1.18rem}
 
-  /* ===== Services ===== */
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;
-    box-shadow:var(--shadow-sm);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;display:flex;flex-direction:column}
-  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:#cfe0ef}
-  .svc__icon{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;
-    background:linear-gradient(135deg,rgba(0,119,192,.12),rgba(255,96,0,.12));color:var(--navy)}
+  /* Services */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;box-shadow:var(--shadow-sm);transition:transform .28s,box-shadow .28s,border-color .28s;display:flex;flex-direction:column;overflow:hidden}
+  .svc::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--amber));transform:scaleX(0);transform-origin:right;transition:transform .35s}
+  .svc:hover{transform:translateY(-7px);box-shadow:var(--shadow-md);border-color:#cfe0ef}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc__num{position:absolute;inset-block-start:22px;inset-inline-start:26px;font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--line)}
+  .svc__icon{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(135deg,rgba(0,119,192,.14),rgba(255,96,0,.16));color:var(--navy);box-shadow:inset 0 0 0 1px rgba(0,47,94,.08)}
   .svc__icon svg{width:30px;height:30px}
-  .svc h3{font-size:1.4rem;color:var(--navy);margin-bottom:12px}
-  .svc p{color:var(--muted);font-size:1.02rem;flex:1}
-  .svc__link{margin-top:20px;display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-weight:700;font-size:.98rem}
+  .svc h3{font-size:1.42rem;color:var(--navy);margin-bottom:12px}
+  .svc p{color:var(--muted);font-size:1.03rem;flex:1}
+  .svc__link{margin-top:22px;display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-weight:700;font-size:.98rem}
   .svc__link svg{width:16px;height:16px;transition:transform .2s}
-  .svc:hover .svc__link svg{transform:translateX(-5px)}
+  .svc:hover .svc__link svg{transform:translateX(-6px)}
 
-  /* ===== Why us (dark) ===== */
-  .why{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff}
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
-  .why-item{background:linear-gradient(165deg,#06335f,#04284d);padding:34px 28px;transition:background .25s}
-  .why-item:hover{background:linear-gradient(165deg,#0a3d70,#06325c)}
-  .why-item .n{font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--amber);opacity:.85}
-  .why-item h3{font-size:1.28rem;margin:12px 0 10px;color:#fff}
+  /* Why */
+  .why{background:linear-gradient(165deg,#06335f 0%,var(--navy-deep) 100%);color:#fff;overflow:hidden}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);overflow:hidden}
+  .why-item{background:linear-gradient(165deg,rgba(10,50,94,.92),rgba(4,30,58,.92));padding:36px 30px;transition:background .25s}
+  .why-item:hover{background:linear-gradient(165deg,#0c4480,#073a6c)}
+  .why-item .n{font-family:var(--display);font-weight:900;font-size:1.5rem;color:var(--amber);opacity:.92;line-height:1}
+  .why-item h3{font-size:1.3rem;margin:14px 0 10px;color:#fff}
   .why-item p{color:rgba(255,255,255,.74);font-size:1rem}
 
-  /* ===== How it works ===== */
-  .how{background:var(--surface)}
-  .how__layout{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:center}
-  .how__media{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line);background:#fff}
-  .how__media img{width:100%;height:auto;display:block}
-  .how__steps{display:flex;flex-direction:column;gap:18px}
-  .step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);
-    padding:22px 24px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
-  .step:hover{transform:translateX(-4px);box-shadow:var(--shadow-md)}
-  .step__n{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
-    background:linear-gradient(135deg,var(--orange),var(--orange-deep));color:#fff;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
-  .step h3{font-size:1.18rem;color:var(--navy);margin-bottom:6px}
+  /* How */
+  .how{background:var(--surface);overflow:hidden}
+  .how__layout{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,68px);align-items:center}
+  .how__media{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid #d6e2ee;background:linear-gradient(165deg,#fff,#eef4fb)}
+  .how__media svg{width:100%;height:auto;display:block}
+  .how__steps{display:flex;flex-direction:column;gap:16px}
+  .step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+  .step:hover{transform:translateX(-5px);box-shadow:var(--shadow-md)}
+  .step__n{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),var(--orange-deep));color:#fff;font-family:var(--display);font-weight:800;font-size:1.2rem;box-shadow:0 6px 16px rgba(255,96,0,.3)}
+  .step h3{font-size:1.2rem;color:var(--navy);margin-bottom:6px}
   .step p{color:var(--muted);font-size:1rem}
+  .hl-ray{transform-origin:90px 86px;animation:spin 26s linear infinite}
+  .hl-flow{stroke-dasharray:9 11;animation:flow 1.1s linear infinite}
+  .hl-flow-up{stroke-dasharray:8 12;animation:flowup 1.4s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-20}}
+  @keyframes flowup{to{stroke-dashoffset:20}}
+  .hl-boiler{animation:boilerglow 3.2s ease-in-out infinite}
+  .hl-boiler.b2{animation-delay:.5s}.hl-boiler.b3{animation-delay:1s}
+  @keyframes boilerglow{0%,100%{opacity:.55}50%{opacity:1}}
+  .hl-sun-core{animation:sunpulse 3.4s ease-in-out infinite}
+  @keyframes sunpulse{0%,100%{opacity:.85}50%{opacity:1}}
 
-  /* ===== Stats band ===== */
-  .stats-band{background:linear-gradient(120deg,var(--navy-deep),var(--navy) 60%,#0a3d70);color:#fff}
-  .stats-band .container{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding-block:clamp(44px,6vw,72px)}
-  .stat-big .num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;direction:ltr;unicode-bidi:isolate;
-    background:linear-gradient(120deg,#fff,var(--amber));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .stat-big .lbl{margin-top:10px;color:rgba(255,255,255,.8);font-weight:600}
+  /* Stats band */
+  .stats-band{background:linear-gradient(120deg,var(--navy-deep),var(--navy) 55%,#0a3d70);color:#fff;position:relative;overflow:hidden}
+  .stats-band .container{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding-block:clamp(48px,6vw,76px);position:relative;z-index:1}
+  .stat-big .num{font-family:var(--display);font-weight:900;font-size:clamp(2.3rem,4.2vw,3.4rem);line-height:1;direction:ltr;unicode-bidi:isolate;background:linear-gradient(120deg,#fff,var(--amber));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat-big .lbl{margin-top:10px;color:rgba(255,255,255,.82);font-weight:600}
 
-  /* ===== Contact ===== */
-  .contact__layout{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,56px);align-items:start}
-  .contact__info h2{font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--navy)}
-  .contact__info > p{margin-top:14px;color:var(--muted);font-size:1.08rem;max-width:480px}
+  /* Contact */
+  .contact__layout{display:grid;grid-template-columns:1fr 1.08fr;gap:clamp(30px,5vw,58px);align-items:start}
+  .contact__info h2{font-size:clamp(1.9rem,3.8vw,2.7rem);color:var(--navy);font-weight:900}
+  .contact__info>p{margin-top:14px;color:var(--muted);font-size:1.1rem;max-width:480px}
   .contact__cards{margin-top:30px;display:flex;flex-direction:column;gap:14px}
-  .ci{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow-sm)}
-  .ci__icon{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:rgba(0,119,192,.1);color:var(--navy)}
+  .ci{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+  .ci:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .ci__icon{flex:none;width:50px;height:50px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,119,192,.12),rgba(255,96,0,.12));color:var(--navy)}
   .ci__icon svg{width:24px;height:24px}
-  .ci__main{font-weight:700;color:var(--navy);font-size:1.08rem}
-  .ci__sub{color:var(--muted);font-size:.92rem;margin-top:2px}
-  .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(24px,3vw,36px);box-shadow:var(--shadow-md)}
-  .form-card h3{font-size:1.5rem;color:var(--navy)}
-  .form-card > p{color:var(--muted);margin-top:8px;margin-bottom:22px;font-size:1rem}
+  .ci__main{font-weight:700;color:var(--navy);font-size:1.06rem}
+  .ci__sub{color:var(--muted);font-size:.9rem;margin-top:2px}
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,3vw,40px);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  .form-card::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:5px;background:linear-gradient(90deg,var(--orange),var(--amber))}
+  .form-card h3{font-size:1.55rem;color:var(--navy);font-weight:900}
+  .form-card>p{color:var(--muted);margin-top:8px;margin-bottom:24px;font-size:1rem}
   .field{margin-bottom:18px}
   .field label{display:block;font-weight:700;color:var(--navy);font-size:.95rem;margin-bottom:7px}
   .field label .req{color:var(--orange)}
-  .field input,.field textarea{width:100%;font-family:var(--font-body);font-size:1rem;color:var(--ink);
-    padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);transition:border-color .2s,box-shadow .2s}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,119,192,.12);background:#fff}
+  .field input,.field textarea{width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;background:var(--surface);transition:border-color .2s,box-shadow .2s,background .2s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,119,192,.13);background:#fff}
   .field textarea{resize:vertical;min-height:96px}
   .consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:20px;font-size:.9rem;color:var(--muted)}
   .consent input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--orange)}
   .form-card .btn{width:100%}
-  .form-success{display:none;text-align:center;padding:18px}
+  .form-success{display:none;text-align:center;padding:20px}
   .form-success.show{display:block}
-  .form-success .ok{width:64px;height:64px;border-radius:50%;background:rgba(34,160,90,.12);color:#1f9d56;display:grid;place-items:center;margin:0 auto 16px}
-  .form-success h3{color:var(--navy);font-size:1.4rem}
+  .form-success .ok{width:66px;height:66px;border-radius:50%;background:rgba(34,160,90,.12);color:#1f9d56;display:grid;place-items:center;margin:0 auto 16px}
+  .form-success h3{color:var(--navy);font-size:1.45rem}
   .form-success p{color:var(--muted);margin-top:8px}
   .form-success .btn{margin-top:18px;width:auto;background:#25D366;border-color:#25D366}
 
-  /* ===== FAQ ===== */
-  .faq__list{max-width:860px;margin-inline:auto;display:flex;flex-direction:column;gap:12px}
+  /* FAQ */
+  .faq__list{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:12px}
   .faq__item{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:box-shadow .2s,border-color .2s}
   .faq__item.open{box-shadow:var(--shadow-md);border-color:#cfe0ef}
-  .faq__q{width:100%;text-align:start;background:none;border:0;cursor:pointer;padding:22px 24px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-display);
-    font-weight:700;font-size:1.12rem;color:var(--navy)}
-  .faq__q .ic{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
-    background:var(--surface-2);color:var(--navy);transition:transform .3s,background .2s,color .2s}
+  .faq__q{width:100%;text-align:start;background:none;border:0;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--display);font-weight:700;font-size:1.14rem;color:var(--navy)}
+  .faq__q .ic{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--navy);transition:transform .3s,background .2s,color .2s}
   .faq__item.open .faq__q .ic{transform:rotate(45deg);background:var(--orange);color:#fff}
   .faq__a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-  .faq__a p{padding:0 24px 24px;color:var(--muted);font-size:1.02rem}
+  .faq__a p{padding:0 24px 24px;color:var(--muted);font-size:1.03rem}
 
-  /* ===== Footer ===== */
-  .footer{background:var(--navy-deep);color:rgba(255,255,255,.78);padding-block:clamp(48px,6vw,72px) 28px}
-  .footer__top{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:clamp(28px,4vw,56px)}
-  .footer__brand img{height:54px;width:auto;margin-bottom:18px}
+  /* Footer */
+  .footer{background:var(--navy-deep);color:rgba(255,255,255,.78);padding-block:clamp(52px,6vw,76px) 28px;position:relative;overflow:hidden}
+  .footer__top{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:clamp(30px,4vw,58px);position:relative;z-index:1}
+  .footer__brand img{height:56px;width:auto;margin-bottom:18px}
   .footer__brand p{font-size:1rem;max-width:340px;line-height:1.7}
   .footer__chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
   .footer__chips span{font-size:.82rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:5px 12px;border-radius:999px}
   .footer h4{color:#fff;font-size:1.05rem;margin-bottom:16px}
   .footer__col a,.footer__col .line{display:block;color:rgba(255,255,255,.74);padding:6px 0;font-size:.98rem;transition:color .2s}
   .footer__col a:hover{color:var(--amber)}
-  .footer__bottom{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
-    display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center;font-size:.86rem;color:rgba(255,255,255,.6)}
+  .footer__bottom{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center;font-size:.86rem;color:rgba(255,255,255,.6);position:relative;z-index:1}
   .footer__legal{display:inline-flex;gap:8px;align-items:center}
   .footer__legal a{color:rgba(255,255,255,.7)}.footer__legal a:hover{color:var(--amber)}
 
-  /* ===== WhatsApp float ===== */
-  .wa-float{position:fixed;inset-block-end:24px;inset-inline-start:24px;z-index:80;width:60px;height:60px;border-radius:50%;
-    background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);transition:transform .2s}
+  .wa-float{position:fixed;inset-block-end:24px;inset-inline-end:24px;z-index:80;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);transition:transform .2s}
   .wa-float:hover{transform:scale(1.08)}
   .wa-float svg{width:32px;height:32px}
   .wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulse 2.4s ease-out infinite}
   @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
 
-  /* ===== Reveal ===== */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   .reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}
 
-  /* ===== Responsive ===== */
   @media (max-width:1024px){
     .grid-3,.why-grid{grid-template-columns:repeat(2,1fr)}
-    .stats-band .container{grid-template-columns:repeat(2,1fr);gap:36px 24px}
-    .how__layout,.contact__layout{grid-template-columns:1fr;gap:32px}
+    .stats-band .container{grid-template-columns:repeat(2,1fr);gap:38px 24px}
+    .how__layout,.contact__layout{grid-template-columns:1fr;gap:34px}
     .footer__top{grid-template-columns:1fr 1fr}
   }
   @media (max-width:760px){
     body{font-size:17px}
-    .nav,.header-cta .header-phone{display:none}
+    .nav,.header-cta .header-phone,.header-cta .btn{display:none}
     .hamburger{display:grid;place-items:center}
-    .header-cta .btn{display:none}
-    .brand{margin-inline-start:auto}
     .header-inner{justify-content:space-between}
-    .hero{min-height:auto;padding-block:0}
-    .hero .container{padding-block:calc(var(--header-h) + 36px) 120px}
+    .hero{min-height:auto}
+    .hero .container{padding-block:calc(var(--header-h) + 38px) 128px}
     .hero__inner{max-width:100%}
-    .hero__actions{flex-direction:column;align-items:stretch}
-    .hero__actions .btn{width:100%}
-    .hero__badge{inset-block-end:96px;padding:11px 14px}
-    .hero__badge .yr{font-size:1.6rem}
-    .grid-3,.why-grid{grid-template-columns:1fr}
-    .footer__top{grid-template-columns:1fr}
+    .hero__actions{flex-direction:column;align-items:stretch}.hero__actions .btn{width:100%}
+    .hero__stats{max-width:100%}
+    .hero__stats .stat{flex:1 1 40%;min-width:0;border-block-start:1px solid rgba(255,255,255,.12)}
+    .hero__stats .stat:nth-child(-n+2){border-block-start:0}
+    .hero__stats .stat:nth-child(odd){border-inline-start:0}
+    .hero__sun{inset-inline-end:5%;inset-block-start:10%;width:96px;opacity:.55}
     .scroll-cue{display:none}
-    .why-grid{gap:0}
+    .grid-3,.why-grid{grid-template-columns:1fr}.why-grid{gap:0}
+    .footer__top{grid-template-columns:1fr}
   }
-  /* Mobile nav drawer */
   .mnav{position:fixed;inset:0;z-index:120;background:rgba(0,20,40,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .25s}
   .mnav.open{opacity:1;visibility:visible}
-  .mnav__panel{position:absolute;inset-block:0;inset-inline-end:0;width:min(82vw,340px);background:var(--navy-deep);
-    transform:translateX(-100%);transition:transform .3s ease;padding:24px;display:flex;flex-direction:column;gap:6px}
-  [dir=rtl] .mnav__panel{transform:translateX(100%)}
+  .mnav__panel{position:absolute;inset-block:0;inset-inline-end:0;width:min(82vw,340px);background:var(--navy-deep);transform:translateX(100%);transition:transform .3s ease;padding:24px;display:flex;flex-direction:column;gap:6px}
   .mnav.open .mnav__panel{transform:none}
   .mnav__close{align-self:flex-start;background:none;border:0;color:#fff;cursor:pointer;padding:8px;margin-bottom:8px}
   .mnav__close svg{width:28px;height:28px}
@@ -348,49 +339,31 @@
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
     .reveal{opacity:1;transform:none}
+    .hero__sun .rays,.hl-ray,.hl-flow,.hl-flow-up,.hero__seal .ring{animation:none !important}
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">דלגו לתוכן</a>
 
-<!-- Header -->
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="מקור הטבע - לדף הבית">
-      <img src="assets/logo.png" alt="מקור הטבע - מערכות סולאריות מרכזיות" width="138" height="46" />
-    </a>
+    <a class="brand" href="#top" aria-label="מקור הטבע - לדף הבית"><img src="assets/logo.png" alt="מקור הטבע - מערכות סולאריות מרכזיות" width="152" height="50" /></a>
     <nav class="nav" aria-label="ניווט ראשי">
-      <a href="#services">השירותים שלנו</a>
-      <a href="#why">למה אנחנו</a>
-      <a href="#system">איך זה עובד</a>
-      <a href="#faq">שאלות נפוצות</a>
-      <a href="#contact">צרו קשר</a>
+      <a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a>
     </nav>
     <div class="header-cta">
-      <a class="header-phone ltr" href="tel:+972544802380" aria-label="התקשרו 0544-802380">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        054-480-2380
-      </a>
+      <a class="header-phone ltr" href="tel:+972544802380" aria-label="התקשרו 054-480-2380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>054-480-2380</a>
       <a class="btn btn-primary" href="#contact">קבלו סקר חינם</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="פתחו תפריט" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="פתחו תפריט" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </header>
 
-<!-- Mobile nav -->
 <div class="mnav" id="mnav">
   <div class="mnav__panel">
-    <button class="mnav__close" id="mnavClose" aria-label="סגרו תפריט">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <a href="#services">השירותים שלנו</a>
-    <a href="#why">למה אנחנו</a>
-    <a href="#system">איך זה עובד</a>
-    <a href="#faq">שאלות נפוצות</a>
-    <a href="#contact">צרו קשר</a>
+    <button class="mnav__close" id="mnavClose" aria-label="סגרו תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a>
     <a class="btn btn-primary" href="#contact">קבלו סקר חינם</a>
     <a class="header-phone ltr" style="color:#fff;margin-top:8px;padding:12px" href="tel:+972544802380">054-480-2380</a>
   </div>
@@ -399,27 +372,18 @@
 <main id="main">
 <span id="top"></span>
 
-<!-- Hero -->
 <section class="hero" aria-label="מקור הטבע - מערכות סולאריות מרכזיות לחימום מים">
   <div class="hero__bg"><img src="assets/hero.jpg" alt="מערך קולטים סולאריים על גג בניין מגורים בשעת השקיעה" fetchpriority="high" width="1456" height="816" /></div>
   <div class="hero__scrim"></div>
+  <div class="hero__sun" aria-hidden="true"><div class="lot" id="sunLottie"></div><div class="rays" id="sunRays"></div><div class="disc"></div></div>
   <div class="container">
     <div class="hero__inner">
-      <span class="hero__eyebrow">מומחים למערכות סולאריות מרכזיות · מאז 1963</span>
-      <h1>
-        <span>מים חמים לכל דייר.</span>
-        <span><span class="accent">שקט נפשי</span> לכל ועד.</span>
-      </h1>
+      <span class="hero__eyebrow"><span class="dot"></span>מומחים למערכות סולאריות מרכזיות · מאז 1963</span>
+      <h1><span>מים חמים לכל דייר.</span><span><span class="accent">שקט נפשי</span> לכל ועד.</span></h1>
       <p class="hero__sub">תכנון, הקמה, שיקום ותחזוקה של מערכות סולאריות מרכזיות לחימום מים בבתים משותפים - בסטנדרט הנדסי גבוה, באחריות מלאה, ובשירות שלא נגמר ביום ההתקנה.</p>
       <div class="hero__actions">
-        <a class="btn btn-primary" href="#contact">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          לתיאום סקר וייעוץ ללא עלות
-        </a>
-        <a class="btn btn-ghost ltr" href="tel:+972544802380">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          054-480-2380
-        </a>
+        <a class="btn btn-primary" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>לתיאום סקר וייעוץ ללא עלות</a>
+        <a class="btn btn-ghost ltr" href="tel:+972544802380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>054-480-2380</a>
       </div>
       <div class="hero__stats">
         <div class="stat"><div class="num" data-count="60" data-suffix="+">60+</div><div class="lbl">שנות מומחיות</div></div>
@@ -429,25 +393,18 @@
       </div>
     </div>
   </div>
-  <div class="hero__badge">
-    <span class="yr">1963</span>
-    <span class="txt">מובילים את התחום למעלה מ-60 שנה</span>
-  </div>
   <div class="scroll-cue" aria-hidden="true"><span class="mouse"></span><span>גללו</span></div>
 </section>
 
-<!-- Trust strip -->
 <div class="trust">
   <div class="container">
-    <span class="trust__label">עובדים עם יצרני הקולטים והדודים המובילים בישראל</span>
-    <div class="trust__logos">
-      <span>כרומגן</span><span>סנהדרין</span><span>אמקור</span><span>אידיאל</span><span>מקור</span>
-    </div>
+    <span class="trust__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.3 2.3 7.3-6.3-4.6-6.3 4.6L8 13.7 2 9.4h7.6z"/></svg>עובדים עם יצרני הקולטים והדודים המובילים בישראל</span>
+    <div class="trust__logos"><span>כרומגן</span><span>סנהדרין</span><span>אמקור</span><span>אידיאל</span><span>מקור</span></div>
   </div>
 </div>
 
-<!-- Services -->
 <section class="section" id="services">
+  <span class="glow" style="width:380px;height:380px;background:rgba(255,140,30,.1);inset-inline-end:-120px;inset-block-start:40px"></span>
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">מה אנחנו עושים</span>
@@ -455,33 +412,18 @@
       <p>מתכננים, מקימים ומתחזקים את כל מה שקשור לחימום מים סולארי בבניין - כך שהוועד מתעסק בניהול, והדיירים פשוט נהנים ממים חמים.</p>
     </div>
     <div class="grid-3">
-      <article class="svc reveal" data-d="1">
-        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
-        <h3>בתים משותפים</h3>
-        <p>תכנון והקמה של מערכות סולאריות מרכזיות לחימום מים, מותאמות למספר הדיירים, לשטח הגג ולתקציב הוועד - עם ניהול עבודה מסודר וזמינות לכל אורך הדרך.</p>
-        <a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
-      </article>
-      <article class="svc reveal" data-d="2">
-        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10"/><path d="M12 3v6m-3 11v-6h6v6"/></svg></div>
-        <h3>בנייה פרטית חדשה</h3>
-        <p>פתרון שלם לבית פרטי - דוד שמש, קולטים ודוד חשמל משולב - מותקן בתיאום מלא עם הקבלן, מהתכנון בשלב השלד ועד ההפעלה ומסירה לדייר.</p>
-        <a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
-      </article>
-      <article class="svc reveal" data-d="3">
-        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.5-.4-.4-2.5z"/></svg></div>
-        <h3>תיקונים ותחזוקה</h3>
-        <p>איתור ותיקון תקלות, החלפת גופי חימום ומשאבות, ניקוי קולטים ותחזוקה תקופתית - שירות מהיר שמחזיר מים חמים ומאריך את חיי המערכת.</p>
-        <a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
-      </article>
+      <article class="svc reveal" data-d="1"><span class="svc__num">01</span><div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>בתים משותפים</h3><p>תכנון והקמה של מערכות סולאריות מרכזיות לחימום מים, מותאמות למספר הדיירים, לשטח הגג ולתקציב הוועד - עם ניהול עבודה מסודר וזמינות לכל אורך הדרך.</p><a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a></article>
+      <article class="svc reveal" data-d="2"><span class="svc__num">02</span><div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10"/><path d="M12 14v6"/><circle cx="12" cy="10.5" r="1.6"/></svg></div><h3>בנייה פרטית חדשה</h3><p>פתרון שלם לבית פרטי - דוד שמש, קולטים ודוד חשמל משולב - מותקן בתיאום מלא עם הקבלן, מהתכנון בשלב השלד ועד ההפעלה ומסירה לדייר.</p><a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a></article>
+      <article class="svc reveal" data-d="3"><span class="svc__num">03</span><div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.5-.4-.4-2.5z"/></svg></div><h3>תיקונים ותחזוקה</h3><p>איתור ותיקון תקלות, החלפת גופי חימום ומשאבות, ניקוי קולטים ותחזוקה תקופתית - שירות מהיר שמחזיר מים חמים ומאריך את חיי המערכת.</p><a class="svc__link" href="#contact">לפרטים נוספים <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a></article>
     </div>
   </div>
 </section>
 
-<!-- Why us -->
 <section class="section why on-dark" id="why">
+  <span class="glow" style="width:460px;height:460px;background:rgba(255,150,40,.14);inset-inline-start:-160px;inset-block-end:-120px"></span>
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow on-dark">למה מקור הטבע</span>
+      <span class="eyebrow dark">למה מקור הטבע</span>
       <h2>ניסיון של דורות, סטנדרט של היום</h2>
       <p>בחירה במתקין הנכון היא ההפרש בין מערכת שעובדת בשקט שנים - לבין תקלות חוזרות וויכוחים בוועד. הנה מה שמייחד אותנו.</p>
     </div>
@@ -496,7 +438,6 @@
   </div>
 </section>
 
-<!-- How it works -->
 <section class="section how" id="system">
   <div class="container">
     <div class="section-head reveal">
@@ -505,7 +446,46 @@
       <p>קולטים על הגג קולטים את חום השמש ומחממים את המים, שזורמים בלולאה סגורה אל דודי האגירה של כל דירה. פחות חשמל, יותר מים חמים - לאורך כל היום.</p>
     </div>
     <div class="how__layout">
-      <div class="how__media reveal"><img src="assets/system-diagram.jpg" alt="תרשים מערכת סולארית מרכזית לחימום מים בבניין משותף - קולטים על הגג ודודי אגירה לכל דירה" loading="lazy" width="1191" height="921" /></div>
+      <div class="how__media reveal" role="img" aria-label="תרשים מערכת סולארית מרכזית - השמש מחממת קולטים על הגג, החום זורם בלולאה אל דודי האגירה של כל דירה">
+        <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf3fb"/><stop offset="1" stop-color="#f6fafe"/></linearGradient>
+            <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a3f73"/><stop offset="1" stop-color="#062a52"/></linearGradient>
+            <linearGradient id="bldg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e7eef6"/></linearGradient>
+          </defs>
+          <rect x="0" y="0" width="560" height="460" fill="url(#sky)"/>
+          <g class="hl-ray"><g stroke="#FFB23E" stroke-width="4" stroke-linecap="round">
+            <line x1="90" y1="34" x2="90" y2="14"/><line x1="90" y1="138" x2="90" y2="158"/>
+            <line x1="38" y1="86" x2="18" y2="86"/><line x1="142" y1="86" x2="162" y2="86"/>
+            <line x1="53" y1="49" x2="39" y2="35"/><line x1="127" y1="123" x2="141" y2="137"/>
+            <line x1="127" y1="49" x2="141" y2="35"/><line x1="53" y1="123" x2="39" y2="137"/></g></g>
+          <circle class="hl-sun-core" cx="90" cy="86" r="30" fill="#FF8A1E"/>
+          <circle cx="90" cy="86" r="30" fill="none" stroke="#FFD27A" stroke-width="3" opacity=".7"/>
+          <g><polygon points="150,210 300,150 330,176 180,236" fill="url(#panel)" stroke="#0a3f73" stroke-width="2"/>
+            <g stroke="#3f7cb5" stroke-width="1.4" opacity=".75"><line x1="180" y1="200" x2="206" y2="222"/><line x1="212" y1="188" x2="238" y2="210"/><line x1="244" y1="176" x2="270" y2="198"/><line x1="276" y1="164" x2="300" y2="185"/></g></g>
+          <g stroke="#FFB23E" stroke-width="2.4" stroke-linecap="round" opacity=".55" stroke-dasharray="2 7"><line x1="112" y1="106" x2="200" y2="178"/><line x1="120" y1="96" x2="230" y2="166"/></g>
+          <rect x="330" y="150" width="200" height="280" rx="10" fill="url(#bldg)" stroke="#cddcea" stroke-width="2"/>
+          <line x1="330" y1="240" x2="530" y2="240" stroke="#dde7f1" stroke-width="2"/>
+          <line x1="330" y1="330" x2="530" y2="330" stroke="#dde7f1" stroke-width="2"/>
+          <g fill="#dce8f3"><rect x="470" y="180" width="38" height="34" rx="4"/><rect x="470" y="270" width="38" height="34" rx="4"/><rect x="470" y="360" width="38" height="34" rx="4"/></g>
+          <g>
+            <rect class="hl-boiler" x="356" y="172" width="40" height="50" rx="9" fill="#FF8A1E"/>
+            <rect class="hl-boiler b2" x="356" y="262" width="40" height="50" rx="9" fill="#FF8A1E"/>
+            <rect class="hl-boiler b3" x="356" y="352" width="40" height="50" rx="9" fill="#FF8A1E"/>
+            <g stroke="#fff" stroke-width="2" opacity=".85" fill="none"><path d="M363 184h26M363 194h26M363 204h26"/><path d="M363 274h26M363 284h26M363 294h26"/><path d="M363 364h26M363 374h26M363 384h26"/></g>
+          </g>
+          <path class="hl-flow" d="M255 200 L255 132 L420 132 L420 172" fill="none" stroke="#FF6000" stroke-width="5" stroke-linecap="round"/>
+          <path class="hl-flow" d="M420 222 L420 262" fill="none" stroke="#FF6000" stroke-width="5" stroke-linecap="round"/>
+          <path class="hl-flow" d="M420 312 L420 352" fill="none" stroke="#FF6000" stroke-width="5" stroke-linecap="round"/>
+          <path class="hl-flow-up" d="M438 402 L438 122 L268 122 L268 200" fill="none" stroke="#0077C0" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+          <rect x="300" y="430" width="240" height="6" rx="3" fill="#cdd9e6"/>
+          <path d="M398 402 L398 418 L378 418" fill="none" stroke="#7d93a8" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="372" cy="424" r="4" fill="#0077C0"/>
+          <text x="90" y="172" text-anchor="middle" font-family="Assistant,sans-serif" font-size="13" font-weight="700" fill="#586a7a">השמש</text>
+          <text x="240" y="262" text-anchor="middle" font-family="Assistant,sans-serif" font-size="13" font-weight="700" fill="#586a7a">קולטים</text>
+          <text x="430" y="452" text-anchor="middle" font-family="Assistant,sans-serif" font-size="13" font-weight="700" fill="#586a7a">דוד בכל דירה</text>
+        </svg>
+      </div>
       <div class="how__steps">
         <div class="step reveal" data-d="1"><div class="step__n">1</div><div><h3>קליטה על הגג</h3><p>מערך קולטים סולאריים ממוקם ומוטה לזווית האופטימלית לקליטת חום מרבית לאורך השנה.</p></div></div>
         <div class="step reveal" data-d="1"><div class="step__n">2</div><div><h3>העברת חום בלולאה</h3><p>נוזל ייעודי מוביל את החום מהקולטים אל מחליפי חום בכל דוד, ביעילות ובלי בזבוז.</p></div></div>
@@ -516,8 +496,8 @@
   </div>
 </section>
 
-<!-- Stats band -->
 <section class="stats-band" aria-label="נתונים על מקור הטבע">
+  <span class="glow" style="width:520px;height:300px;background:rgba(255,160,50,.18);inset-inline-start:50%;transform:translateX(-50%);inset-block-start:-80px"></span>
   <div class="container">
     <div class="stat-big reveal"><div class="num" data-count="1963" data-plain="1">1963</div><div class="lbl">שנת ההקמה</div></div>
     <div class="stat-big reveal" data-d="1"><div class="num" data-count="60" data-suffix="+">60+</div><div class="lbl">שנות ניסיון</div></div>
@@ -526,8 +506,8 @@
   </div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
+  <span class="glow" style="width:360px;height:360px;background:rgba(0,119,192,.08);inset-inline-end:-120px;inset-block-start:60px"></span>
   <div class="container">
     <div class="contact__layout">
       <div class="contact__info reveal">
@@ -535,44 +515,20 @@
         <h2>מערכת חדשה? מים שלא מתחממים? תקלה דחופה?</h2>
         <p>השאירו פרטים ונחזור אליכם עם ייעוץ ראשוני והערכה - בלי התחייבות. אפשר גם פשוט להרים טלפון.</p>
         <div class="contact__cards">
-          <a class="ci" href="tel:+972544802380">
-            <span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <span><span class="ci__main ltr">054-480-2380 · 03-677-7935</span><span class="ci__sub">ראשון-חמישי, 8:00-17:00</span></span>
-          </a>
-          <a class="ci" href="mailto:makorhateva1@gmail.com">
-            <span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-            <span><span class="ci__main ltr">makorhateva1@gmail.com</span><span class="ci__sub">מענה תוך יום עסקים</span></span>
-          </a>
-          <div class="ci">
-            <span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <span><span class="ci__main">רח' עוזיאל 63, רמת גן</span><span class="ci__sub">שירות בכל מרכז הארץ</span></span>
-          </div>
+          <a class="ci" href="tel:+972544802380"><span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><span class="ci__main ltr">054-480-2380 · 03-677-7935</span><span class="ci__sub">ראשון-חמישי, 8:00-17:00</span></span></a>
+          <a class="ci" href="mailto:makorhateva1@gmail.com"><span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span><span class="ci__main ltr">makorhateva1@gmail.com</span><span class="ci__sub">מענה תוך יום עסקים</span></span></a>
+          <div class="ci"><span class="ci__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><span class="ci__main">רח' עוזיאל 63, רמת גן</span><span class="ci__sub">שירות בכל מרכז הארץ</span></span></div>
         </div>
       </div>
       <div class="form-card reveal" data-d="1">
         <form id="leadForm" novalidate>
           <h3>בקשת סקר וייעוץ חינם</h3>
           <p>נחזור אליכם עוד היום עם המלצה ראשונית.</p>
-          <div class="field">
-            <label for="f-name">שם מלא <span class="req">*</span></label>
-            <input id="f-name" name="name" type="text" placeholder="ישראל ישראלי" required autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="f-phone">טלפון <span class="req">*</span></label>
-            <input id="f-phone" name="phone" type="tel" dir="ltr" placeholder="050-0000000" required autocomplete="tel" />
-          </div>
-          <div class="field">
-            <label for="f-addr">כתובת הבניין</label>
-            <input id="f-addr" name="address" type="text" placeholder="רחוב, מספר, עיר" autocomplete="street-address" />
-          </div>
-          <div class="field">
-            <label for="f-msg">איך נוכל לעזור?</label>
-            <textarea id="f-msg" name="message" placeholder="לדוגמה: בניין בן 12 דירות, אין מים חמים בקומות העליונות..."></textarea>
-          </div>
-          <label class="consent">
-            <input type="checkbox" id="f-consent" required />
-            <span>אני מאשר/ת שניתן ליצור איתי קשר בנוגע לפנייה זו.</span>
-          </label>
+          <div class="field"><label for="f-name">שם מלא <span class="req">*</span></label><input id="f-name" name="name" type="text" placeholder="ישראל ישראלי" required autocomplete="name" /></div>
+          <div class="field"><label for="f-phone">טלפון <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" dir="ltr" placeholder="050-0000000" required autocomplete="tel" /></div>
+          <div class="field"><label for="f-addr">כתובת הבניין</label><input id="f-addr" name="address" type="text" placeholder="רחוב, מספר, עיר" autocomplete="street-address" /></div>
+          <div class="field"><label for="f-msg">איך נוכל לעזור?</label><textarea id="f-msg" name="message" placeholder="לדוגמה: בניין בן 12 דירות, אין מים חמים בקומות העליונות..."></textarea></div>
+          <label class="consent"><input type="checkbox" id="f-consent" required /><span>אני מאשר/ת שניתן ליצור איתי קשר בנוגע לפנייה זו.</span></label>
           <button class="btn btn-primary" type="submit">שליחת הפנייה</button>
         </form>
         <div class="form-success" id="formSuccess" role="status" aria-live="polite">
@@ -586,98 +542,73 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section how" id="faq">
   <div class="container">
     <div class="section-head reveal" style="margin-inline:auto;text-align:center">
-      <span class="eyebrow" style="justify-content:center;display:inline-flex">שאלות ותשובות</span>
+      <span class="eyebrow center">שאלות ותשובות</span>
       <h2>כל מה שוועד צריך לדעת</h2>
     </div>
     <div class="faq__list">
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>איך מתבצעת עבודה בבניין משותף?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>מתחילים בסקר בגג ובחדרי הדודים, מציגים לוועד הצעה מפורטת, ומתאמים מועד נוח לביצוע. העבודה מתבצעת בצורה מסודרת ועם הפרעה מינימלית לדיירים, כולל תיאום מראש לכל ניתוק מים.</p></div>
-      </div>
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>כמה זמן לוקחת התקנה של מערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>תלוי בגודל הבניין ובמורכבות הגג, אך ברוב הבתים המשותפים העבודה אורכת בין מספר ימים לשבוע. נמסור לכם לוח זמנים מדויק כבר בשלב ההצעה.</p></div>
-      </div>
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>מה כוללת האחריות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי.</p></div>
-      </div>
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>מי אחראי על תחזוקת המערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד.</p></div>
-      </div>
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>המים לא מתחממים - מה עושים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם.</p></div>
-      </div>
-      <div class="faq__item reveal">
-        <button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, סנהדרין ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div>
-      </div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>איך מתבצעת עבודה בבניין משותף?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>מתחילים בסקר בגג ובחדרי הדודים, מציגים לוועד הצעה מפורטת, ומתאמים מועד נוח לביצוע. העבודה מתבצעת בצורה מסודרת ועם הפרעה מינימלית לדיירים, כולל תיאום מראש לכל ניתוק מים.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>כמה זמן לוקחת התקנה של מערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>תלוי בגודל הבניין ובמורכבות הגג, אך ברוב הבתים המשותפים העבודה אורכת בין מספר ימים לשבוע. נמסור לכם לוח זמנים מדויק כבר בשלב ההצעה.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מה כוללת האחריות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מי אחראי על תחזוקת המערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>המים לא מתחממים - מה עושים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, סנהדרין ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div></div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
 <footer class="footer">
+  <span class="glow" style="width:520px;height:300px;background:rgba(255,140,30,.1);inset-inline-end:-160px;inset-block-start:-100px"></span>
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <img src="assets/logo-white.png" alt="מקור הטבע" width="154" height="56" />
+        <img src="assets/logo-white.png" alt="מקור הטבע" width="160" height="56" />
         <p>מומחים למערכות סולאריות מרכזיות ודודי שמש - לבתים משותפים ולבנייה פרטית. מאז 1963.</p>
         <div class="footer__chips"><span>כרומגן</span><span>אמקור</span><span>סנהדרין</span><span>אידיאל</span></div>
       </div>
-      <div class="footer__col">
-        <h4>ניווט</h4>
-        <a href="#services">השירותים שלנו</a>
-        <a href="#why">למה אנחנו</a>
-        <a href="#system">איך זה עובד</a>
-        <a href="#faq">שאלות נפוצות</a>
-        <a href="#contact">צרו קשר</a>
-      </div>
-      <div class="footer__col">
-        <h4>יצירת קשר</h4>
-        <a class="ltr" href="tel:+972544802380">054-480-2380 · 03-677-7935</a>
-        <a class="ltr" href="mailto:makorhateva1@gmail.com">makorhateva1@gmail.com</a>
-        <span class="line">רח' עוזיאל 63, רמת גן</span>
-        <a href="https://wa.me/972544802380" target="_blank" rel="noopener">וואטסאפ</a>
-      </div>
+      <div class="footer__col"><h4>ניווט</h4><a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a></div>
+      <div class="footer__col"><h4>יצירת קשר</h4><a class="ltr" href="tel:+972544802380">054-480-2380 · 03-677-7935</a><a class="ltr" href="mailto:makorhateva1@gmail.com">makorhateva1@gmail.com</a><span class="line">רח' עוזיאל 63, רמת גן</span><a href="https://wa.me/972544802380" target="_blank" rel="noopener">וואטסאפ</a></div>
     </div>
     <div class="footer__bottom">
       <span>© כל הזכויות שמורות למקור הטבע 2026</span>
-      <span class="footer__legal">
-        <a href="#">מדיניות פרטיות</a>
-        <span aria-hidden="true">·</span>
-        <a href="#">הצהרת נגישות</a>
-      </span>
+      <span class="footer__legal"><a href="#">מדיניות פרטיות</a><span aria-hidden="true">·</span><a href="#">הצהרת נגישות</a></span>
       <span>מערכות סולאריות מרכזיות · דודי שמש · תחזוקה ושירות</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/972544802380" target="_blank" rel="noopener" aria-label="שלחו לנו הודעה בוואטסאפ">
-  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.276l-.999 3.648 3.969-1.223zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
+<a class="wa-float" href="https://wa.me/972544802380" target="_blank" rel="noopener" aria-label="שלחו לנו הודעה בוואטסאפ"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.276l-.999 3.648 3.969-1.223zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 <script>
 (function(){
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Sticky header solidify
+  var rays = document.getElementById("sunRays");
+  if(rays){ for(var i=0;i<12;i++){ var s=document.createElement("span"); s.style.transform="translate(-50%,-100%) rotate("+(i*30)+"deg)"; rays.appendChild(s); } }
+
+  try{
+    if(window.lottie){
+      var anim = lottie.loadAnimation({
+        container: document.getElementById("sunLottie"),
+        renderer: "svg", loop: true, autoplay: !reduce,
+        path: "assets/energy-pulse.json",
+        rendererSettings: { preserveAspectRatio: "xMidYMid meet" }
+      });
+      if(reduce){ anim.addEventListener("DOMLoaded", function(){ anim.goToAndStop(20, true); }); }
+    }
+  }catch(e){}
+
   var header = document.getElementById("header");
-  function onScroll(){ if(window.scrollY > 40){ header.classList.add("scrolled"); } else { header.classList.remove("scrolled"); } }
+  function onScroll(){ if(window.scrollY > 30){ header.classList.add("scrolled"); } else { header.classList.remove("scrolled"); } }
   onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
 
-  // Mobile nav
-  var mnav = document.getElementById("mnav");
-  var ham = document.getElementById("hamburger");
+  var mnav=document.getElementById("mnav"), ham=document.getElementById("hamburger");
   function openNav(){ mnav.classList.add("open"); ham.setAttribute("aria-expanded","true"); document.body.style.overflow="hidden"; }
   function closeNav(){ mnav.classList.remove("open"); ham.setAttribute("aria-expanded","false"); document.body.style.overflow=""; }
   ham.addEventListener("click", openNav);
@@ -685,88 +616,63 @@
   mnav.addEventListener("click", function(e){ if(e.target===mnav) closeNav(); });
   mnav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeNav); });
 
-  // Smooth-scroll with header offset
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener("click", function(e){
-      var id = a.getAttribute("href");
-      if(id.length<2) return;
-      var t = document.querySelector(id);
-      if(!t) return;
-      e.preventDefault();
-      var y = t.getBoundingClientRect().top + window.scrollY - 64;
-      window.scrollTo({top:y, behavior: reduce ? "auto" : "smooth"});
+      var id=a.getAttribute("href"); if(id.length<2) return;
+      var t=document.querySelector(id); if(!t) return; e.preventDefault();
+      var y=t.getBoundingClientRect().top+window.scrollY-66;
+      window.scrollTo({top:y, behavior: reduce?"auto":"smooth"});
     });
   });
 
-  // Reveal on scroll (robust: never permanently hidden)
-  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
+  var reveals=[].slice.call(document.querySelectorAll(".reveal"));
   function showAll(){ reveals.forEach(function(el){ el.classList.add("in"); }); }
-  if(reduce || !("IntersectionObserver" in window)){
-    showAll();
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); if(en.target.querySelector("[data-count]")) runCounts(en.target); }
-      });
-    }, {threshold:0.14, rootMargin:"0px 0px -8% 0px"});
-    reveals.forEach(function(el){ io.observe(el); });
-    // safety net
-    setTimeout(showAll, 2600);
-  }
-
-  // Count-up
   function runCounts(scope){
     (scope||document).querySelectorAll("[data-count]").forEach(function(el){
       if(el.dataset.done) return; el.dataset.done="1";
       if(reduce){ return; }
-      var target = parseInt(el.getAttribute("data-count"),10);
-      var suffix = el.getAttribute("data-suffix")||"";
-      var plain = el.getAttribute("data-plain");
-      var dur = 1200, start = null;
-      function tick(ts){ if(!start) start=ts; var p=Math.min((ts-start)/dur,1);
-        var val = Math.floor((plain? (1963 + (target-1963)*0) : 0) + target*p);
-        if(plain){ val = Math.floor(1900 + (target-1900)*p); }
-        el.textContent = val + suffix;
-        if(p<1){ requestAnimationFrame(tick); } else { el.textContent = target + suffix; }
-      }
+      var target=parseInt(el.getAttribute("data-count"),10), suffix=el.getAttribute("data-suffix")||"", plain=el.getAttribute("data-plain");
+      var dur=1200, start=null;
+      function tick(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1);
+        var val=plain?Math.floor(1900+(target-1900)*p):Math.floor(target*p);
+        el.textContent=val+suffix; if(p<1)requestAnimationFrame(tick); else el.textContent=target+suffix; }
       requestAnimationFrame(tick);
     });
   }
-  // also run hero counts immediately (above fold)
+  if(reduce || !("IntersectionObserver" in window)){ showAll(); }
+  else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); if(en.target.querySelector("[data-count]")) runCounts(en.target); } });
+    },{threshold:0.14, rootMargin:"0px 0px -8% 0px"});
+    reveals.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2600);
+  }
   runCounts(document.querySelector(".hero"));
 
-  // FAQ accordion
   document.querySelectorAll(".faq__item").forEach(function(item){
-    var btn = item.querySelector(".faq__q");
-    var ans = item.querySelector(".faq__a");
+    var btn=item.querySelector(".faq__q"), ans=item.querySelector(".faq__a");
     btn.addEventListener("click", function(){
-      var open = item.classList.contains("open");
-      document.querySelectorAll(".faq__item.open").forEach(function(o){
-        if(o!==item){ o.classList.remove("open"); o.querySelector(".faq__q").setAttribute("aria-expanded","false"); o.querySelector(".faq__a").style.maxHeight=null; }
-      });
+      var open=item.classList.contains("open");
+      document.querySelectorAll(".faq__item.open").forEach(function(o){ if(o!==item){ o.classList.remove("open"); o.querySelector(".faq__q").setAttribute("aria-expanded","false"); o.querySelector(".faq__a").style.maxHeight=null; } });
       if(open){ item.classList.remove("open"); btn.setAttribute("aria-expanded","false"); ans.style.maxHeight=null; }
-      else { item.classList.add("open"); btn.setAttribute("aria-expanded","true"); ans.style.maxHeight = ans.scrollHeight + "px"; }
+      else{ item.classList.add("open"); btn.setAttribute("aria-expanded","true"); ans.style.maxHeight=ans.scrollHeight+"px"; }
     });
   });
 
-  // Lead form
-  var form = document.getElementById("leadForm");
+  var form=document.getElementById("leadForm");
   form.addEventListener("submit", function(e){
     e.preventDefault();
-    var name = form.name.value.trim();
-    var phone = form.phone.value.trim();
-    var consent = document.getElementById("f-consent").checked;
-    if(!name || !phone || !consent){
-      if(!name){ form.name.focus(); } else if(!phone){ form.phone.focus(); } else { document.getElementById("f-consent").focus(); }
-      form.querySelectorAll("[required]").forEach(function(f){ if((f.type==="checkbox"&&!f.checked)||(f.type!=="checkbox"&&!f.value.trim())){ f.style.borderColor="#C00000"; } else { f.style.borderColor=""; } });
+    var name=form.name.value.trim(), phone=form.phone.value.trim(), consent=document.getElementById("f-consent").checked;
+    if(!name||!phone||!consent){
+      if(!name)form.name.focus(); else if(!phone)form.phone.focus(); else document.getElementById("f-consent").focus();
+      form.querySelectorAll("[required]").forEach(function(f){ if((f.type==="checkbox"&&!f.checked)||(f.type!=="checkbox"&&!f.value.trim()))f.style.borderColor="#C00000"; else f.style.borderColor=""; });
       return;
     }
-    var addr = form.address.value.trim();
-    var msg = form.message.value.trim();
-    var text = "שלום, אשמח לסקר וייעוץ.%0Aשם: "+encodeURIComponent(name)+"%0Aטלפון: "+encodeURIComponent(phone);
-    if(addr) text += "%0Aכתובת: "+encodeURIComponent(addr);
-    if(msg) text += "%0A"+encodeURIComponent(msg);
-    document.getElementById("waContinue").href = "https://wa.me/972544802380?text="+text;
+    var addr=form.address.value.trim(), msg=form.message.value.trim();
+    var text="שלום, אשמח לסקר וייעוץ.%0Aשם: "+encodeURIComponent(name)+"%0Aטלפון: "+encodeURIComponent(phone);
+    if(addr)text+="%0Aכתובת: "+encodeURIComponent(addr);
+    if(msg)text+="%0A"+encodeURIComponent(msg);
+    document.getElementById("waContinue").href="https://wa.me/972544802380?text="+text;
     form.style.display="none";
     document.getElementById("formSuccess").classList.add("show");
   });
