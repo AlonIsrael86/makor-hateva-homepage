@@ -1,0 +1,22 @@
+# Makor Hateva - robots.txt (production-ready; preview deploy is held back by X-Robots-Tag noindex header)
+
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers (allow citation in AI answers)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.makorhateva.com/sitemap.xml
