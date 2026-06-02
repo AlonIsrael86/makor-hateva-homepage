@@ -95,7 +95,7 @@
     {"@type":"Question","name":"מה כוללת האחריות?","acceptedAnswer":{"@type":"Answer","text":"אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי."}},
     {"@type":"Question","name":"מי אחראי על תחזוקת המערכת?","acceptedAnswer":{"@type":"Answer","text":"אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד."}},
     {"@type":"Question","name":"המים לא מתחממים - מה עושים?","acceptedAnswer":{"@type":"Answer","text":"מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם."}},
-    {"@type":"Question","name":"באילו יצרנים אתם עובדים?","acceptedAnswer":{"@type":"Answer","text":"רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, סנהדרין ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת."}},
+    {"@type":"Question","name":"באילו יצרנים אתם עובדים?","acceptedAnswer":{"@type":"Answer","text":"רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת."}},
     {"@type":"Question","name":"באילו אזורים אתם נותנים שירות?","acceptedAnswer":{"@type":"Answer","text":"אנחנו פועלים בכל מרכז הארץ - רמת גן, גבעתיים, תל אביב, בני ברק, גבעת שמואל, קרית אונו, פתח תקווה והסביבה. מוזמנים להרים טלפון ולבדוק זמינות לכתובת שלכם."}}
   ]
 }
@@ -231,13 +231,12 @@
 
   /* Trust */
   .trust{background:var(--navy-deep);color:#fff;border-block-end:1px solid rgba(255,255,255,.06)}
-  .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,46px);flex-wrap:wrap;padding-block:26px}
-  .trust__label{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9);flex:none;display:flex;align-items:center;gap:10px}
-  .trust__label svg{width:20px;height:20px;color:var(--amber)}
-  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(10px,2vw,16px);align-items:center}
-  .trust__logos span{font-family:var(--body);font-weight:700;color:rgba(255,255,255,.82);font-size:1.02rem;letter-spacing:.01em;
-    border:1px solid rgba(255,255,255,.16);padding:7px 15px;border-radius:8px;
-    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+  .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;padding-block:24px}
+  .trust__label{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9);flex:1 1 260px;min-width:0;display:flex;align-items:center;gap:10px}
+  .trust__label svg{width:20px;height:20px;color:var(--amber);flex:none}
+  .trust__logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
+  .trust__logos .plate{background:#fff;border-radius:9px;padding:9px 16px;display:flex;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .trust__logos .plate img{height:26px;width:auto;display:block}
 
   /* Services */
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
@@ -245,9 +244,9 @@
   .svc::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--amber));transform:scaleX(0);transform-origin:right;transition:transform .35s;z-index:2}
   .svc:hover{transform:translateY(-7px);box-shadow:var(--shadow-md);border-color:#cfe0ef}
   .svc:hover::before{transform:scaleX(1)}
-  .svc__num{position:absolute;inset-block-start:-22px;inset-inline-start:8px;font-family:var(--display);font-weight:400;font-size:7rem;line-height:1;color:rgba(0,47,94,.05);z-index:0;pointer-events:none;direction:ltr}
+  .svc__num{position:absolute;inset-block-start:-22px;inset-inline-end:10px;font-family:var(--display);font-weight:400;font-size:6.4rem;line-height:1;color:rgba(0,47,94,.055);z-index:0;pointer-events:none;direction:ltr}
   .svc>*:not(.svc__num){position:relative;z-index:1}
-  .svc__icon{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(135deg,rgba(0,119,192,.14),rgba(255,96,0,.16));color:var(--navy);box-shadow:inset 0 0 0 1px rgba(0,47,94,.08);transition:box-shadow .28s}
+  .svc__icon{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;margin-bottom:22px;margin-inline-end:auto;background:linear-gradient(135deg,rgba(0,119,192,.14),rgba(255,96,0,.16));color:var(--navy);box-shadow:inset 0 0 0 1px rgba(0,47,94,.08);transition:box-shadow .28s}
   .svc:hover .svc__icon{box-shadow:inset 0 0 0 1px rgba(0,47,94,.08),0 0 0 4px rgba(255,178,62,.2)}
   .svc__icon svg{width:30px;height:30px}
   .svc h3{font-size:1.42rem;color:var(--navy);margin-bottom:12px}
@@ -265,8 +264,8 @@
     background:linear-gradient(to top,transparent,var(--amber) 40%,var(--amber) 60%,transparent);opacity:.55}
   .why-item{background:linear-gradient(165deg,rgba(10,50,94,.92),rgba(4,30,58,.92));padding:36px 30px;transition:background .25s;position:relative}
   .why-item:hover{background:linear-gradient(165deg,#0c4480,#073a6c)}
-  .why-item .n{font-family:var(--display);font-weight:400;font-size:1.7rem;color:var(--amber);opacity:.92;line-height:1;direction:ltr}
-  .why-item h3{font-size:1.3rem;margin:14px 0 10px;color:#fff}
+  .why-item h3{font-size:1.3rem;margin:0 0 10px;color:#fff}
+  .why-item h3::before{content:"";display:block;width:26px;height:3px;border-radius:3px;margin-bottom:14px;background:linear-gradient(90deg,var(--orange),var(--amber))}
   .why-item p{color:rgba(255,255,255,.74);font-size:1rem}
 
   /* How */
@@ -311,6 +310,7 @@
   .ci__icon{flex:none;width:50px;height:50px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,119,192,.12),rgba(255,96,0,.12));color:var(--navy)}
   .ci__icon svg{width:24px;height:24px}
   .ci__main{font-weight:700;color:var(--navy);font-size:1.06rem}
+  .ci__main.ltr{white-space:nowrap}
   .ci__sub{color:var(--muted);font-size:.9rem;margin-top:2px}
   .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,3vw,40px);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
   .form-card::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:6px;background:linear-gradient(90deg,var(--orange),var(--amber))}
@@ -356,6 +356,7 @@
   .footer h4{color:#fff;font-size:1.05rem;margin-bottom:16px}
   .footer__col{display:flex;flex-direction:column;align-items:center}
   .footer__col a,.footer__col .line{display:block;color:rgba(255,255,255,.74);padding:6px 0;font-size:.98rem;transition:color .2s}
+  .footer__col a.ltr{white-space:nowrap}
   .footer__col a:hover{color:var(--amber)}
   .footer__divider{margin-top:42px;height:3px;max-width:280px;margin-inline:auto;
     background-image:linear-gradient(90deg,var(--amber) 0 50%,transparent 50% 100%);background-size:12px 3px;background-repeat:repeat-x;opacity:.55;position:relative;z-index:1}
@@ -397,10 +398,15 @@
     .hero__stats .stat{flex:1 1 40%;min-width:0;border-block-start:1px solid rgba(255,255,255,.12)}
     .hero__stats .stat:nth-child(-n+2){border-block-start:0}
     .hero__stats .stat:nth-child(odd){border-inline-start:0}
-    .hero__sun{inset-inline-end:auto;inset-inline-start:4%;inset-block-start:3%;width:74px;opacity:.36}
+    .hero__sun{inset-inline-end:auto;inset-inline-start:38%;inset-block-start:12px;width:50px;opacity:.62}
+    .hero__sun .rays,.hero__sun .lot{display:none}
+    .hero__sun .disc{box-shadow:0 0 16px rgba(255,165,55,.5),0 0 38px rgba(255,140,40,.26)}
     .scroll-cue{display:none}
     .grid-3,.why-grid{grid-template-columns:1fr}.why-grid{gap:0}
     .why::after{inset-inline-end:-300px}
+    .trust .container{flex-direction:column;text-align:center;gap:16px}
+    .trust__label{flex:0 1 auto;justify-content:center;text-align:center}
+    .ci__main{font-size:1rem}
     .footer__top{grid-template-columns:1fr}
   }
   .mnav{position:fixed;inset:0;z-index:120;background:rgba(0,20,40,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .25s}
@@ -478,7 +484,11 @@
 <div class="trust">
   <div class="container">
     <span class="trust__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.3 2.3 7.3-6.3-4.6-6.3 4.6L8 13.7 2 9.4h7.6z"/></svg>עובדים עם יצרני הקולטים והדודים המובילים בישראל</span>
-    <div class="trust__logos"><span>כרומגן</span><span>סנהדרין</span><span>אמקור</span><span>אידיאל</span><span>מקור</span></div>
+    <div class="trust__logos">
+      <span class="plate"><img src="assets/logos/chromagen.png" alt="כרומגן" height="26" loading="lazy" /></span>
+      <span class="plate"><img src="assets/logos/amcor.webp" alt="אמקור" height="26" loading="lazy" /></span>
+      <span class="plate"><img src="assets/logos/ideal.png" alt="אידיאל" height="26" loading="lazy" /></span>
+    </div>
   </div>
 </div>
 
@@ -507,12 +517,12 @@
       <p>בחירה במתקין הנכון היא ההפרש בין מערכת שעובדת בשקט שנים - לבין תקלות חוזרות וויכוחים&nbsp;בוועד. הנה מה שמייחד&nbsp;אותנו.</p>
     </div>
     <div class="why-grid reveal">
-      <div class="why-item"><div class="n">01</div><h3>מעל 60 שנות מומחיות</h3><p>מאז 1963 אנחנו עוסקים אך ורק במערכות סולאריות לחימום מים - וראינו כל סוג של גג, בניין ותקלה.</p></div>
-      <div class="why-item"><div class="n">02</div><h3>אחריות מלאה 100%</h3><p>אחריות כתובה על העבודה ועל הציוד, עם התחייבות ברורה לזמני תגובה ולתיקון.</p></div>
-      <div class="why-item"><div class="n">03</div><h3>צוות הנדסי מוסמך</h3><p>תכנון מקצועי לפי תקן, התאמת המערכת לעומס האמיתי של הבניין וביצוע נקי ובטיחותי.</p></div>
-      <div class="why-item"><div class="n">04</div><h3>שירות שזמין באמת</h3><p>איש קשר אחד, מענה מהיר בטלפון ובוואטסאפ, והגעה לשטח גם כשצריך אתמול.</p></div>
-      <div class="why-item"><div class="n">05</div><h3>ציוד של יצרנים מובילים</h3><p>עובדים רק עם קולטים ודודים מתוצרת חברות מובילות - כרומגן, אמקור, סנהדרין ועוד.</p></div>
-      <div class="why-item"><div class="n">06</div><h3>פתרון מקצה לקצה</h3><p>מהסקר הראשוני, דרך התכנון וההקמה ועד התחזוקה השוטפת - הכל תחת קורת גג אחת.</p></div>
+      <div class="why-item"><h3>מעל 60 שנות מומחיות</h3><p>מאז 1963 אנחנו עוסקים אך ורק במערכות סולאריות לחימום מים - וראינו כל סוג של גג, בניין ותקלה.</p></div>
+      <div class="why-item"><h3>אחריות מלאה 100%</h3><p>אחריות כתובה על העבודה ועל הציוד, עם התחייבות ברורה לזמני תגובה ולתיקון.</p></div>
+      <div class="why-item"><h3>צוות הנדסי מוסמך</h3><p>תכנון מקצועי לפי תקן, התאמת המערכת לעומס האמיתי של הבניין וביצוע נקי ובטיחותי.</p></div>
+      <div class="why-item"><h3>שירות שזמין באמת</h3><p>איש קשר אחד, מענה מהיר בטלפון ובוואטסאפ, והגעה לשטח גם כשצריך אתמול.</p></div>
+      <div class="why-item"><h3>ציוד של יצרנים מובילים</h3><p>עובדים רק עם קולטים ודודים מתוצרת חברות מובילות - כרומגן, אמקור ואידיאל.</p></div>
+      <div class="why-item"><h3>פתרון מקצה לקצה</h3><p>מהסקר הראשוני, דרך התכנון וההקמה ועד התחזוקה השוטפת - הכל תחת קורת גג אחת.</p></div>
     </div>
   </div>
 </section>
@@ -636,7 +646,7 @@
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מה כוללת האחריות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מי אחראי על תחזוקת המערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>המים לא מתחממים - מה עושים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם.</p></div></div>
-      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, סנהדרין ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו אזורים אתם נותנים שירות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אנחנו פועלים בכל מרכז הארץ - רמת גן, גבעתיים, תל אביב, בני ברק, גבעת שמואל, קרית אונו, פתח תקווה והסביבה. מוזמנים להרים טלפון ולבדוק זמינות לכתובת שלכם.</p></div></div>
     </div>
   </div>
@@ -651,7 +661,7 @@
       <div class="footer__brand">
         <img src="assets/logo-white.png" alt="מקור הטבע" width="160" height="56" />
         <p>מומחים למערכות סולאריות מרכזיות ודודי שמש - לבתים משותפים ולבנייה פרטית במרכז הארץ. מאז 1963.</p>
-        <div class="footer__chips"><span>כרומגן</span><span>אמקור</span><span>סנהדרין</span><span>אידיאל</span></div>
+        <div class="footer__chips"><span>כרומגן</span><span>אמקור</span><span>אידיאל</span></div>
       </div>
       <div class="footer__col"><h4>ניווט</h4><a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a></div>
       <div class="footer__col"><h4>יצירת קשר</h4><a class="ltr" href="tel:+972544802380">054-480-2380 · 03-677-7935</a><a class="ltr" href="mailto:makorhateva1@gmail.com">makorhateva1@gmail.com</a><span class="line">רח' עוזיאל 63, רמת גן</span><a href="https://wa.me/972544802380" target="_blank" rel="noopener">וואטסאפ</a></div>
