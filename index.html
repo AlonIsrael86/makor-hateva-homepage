@@ -190,6 +190,8 @@
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;isolation:isolate}
   .hero__bg{position:absolute;inset:0;z-index:-3}
   .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+  .hero__vid.ready{opacity:1}
   .hero__scrim{position:absolute;inset:0;z-index:-2;background:
     linear-gradient(to left,rgba(0,17,36,.95) 0%,rgba(0,21,44,.86) 34%,rgba(0,26,52,.52) 64%,rgba(0,28,58,.26) 100%),
     radial-gradient(120% 80% at 16% 20%,rgba(255,138,30,.16),transparent 55%),
@@ -457,7 +459,7 @@
 <span id="top"></span>
 
 <section class="hero" aria-label="מקור הטבע - מערכות סולאריות מרכזיות לחימום מים">
-  <div class="hero__bg"><img src="assets/hero.jpg" alt="מערך קולטים סולאריים על גג בניין מגורים בשעת השקיעה" fetchpriority="high" width="1456" height="816" /></div>
+  <div class="hero__bg"><img src="assets/hero.jpg" alt="מערך קולטים סולאריים על גג בניין מגורים בשעת השקיעה" fetchpriority="high" width="1456" height="816" /><video class="hero__vid" id="heroVid" poster="assets/hero.jpg" muted loop playsinline preload="none" aria-hidden="true"><source src="assets/hero-loop.webm" type="video/webm" /><source src="assets/hero-loop.mp4" type="video/mp4" /></video></div>
   <div class="hero__scrim"></div>
   <div class="hero__sun" aria-hidden="true"><div class="lot" id="sunLottie"></div><div class="rays" id="sunRays"></div><div class="disc"></div></div>
   <div class="container">
@@ -703,6 +705,16 @@
         path: "assets/energy-pulse.json",
         rendererSettings: { preserveAspectRatio: "xMidYMid meet" }
       });
+    }
+  }catch(e){}
+
+  try{
+    var heroVid = document.getElementById("heroVid");
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if(heroVid && !reduce && !saveData){
+      heroVid.preload = "auto";
+      heroVid.addEventListener("loadeddata", function(){ heroVid.classList.add("ready"); var pv=heroVid.play(); if(pv&&pv.catch)pv.catch(function(){}); });
+      heroVid.load();
     }
   }catch(e){}
 
