@@ -5,7 +5,7 @@ A premium, warm, heritage-credible Hebrew/RTL homepage for Makor Hateva — cent
 water-heating systems for apartment buildings and private homes, founded 1963. The page must
 make a building committee (ועד בית) feel that this is the vendor who has quietly kept hot water
 running for 60 years and will answer the phone for the next 60. Primary conversion: book a free
-survey/consultation (סקר וייעוץ ללא עלות) by form, phone, or WhatsApp. Editorial Roei Deutsch /
+on-site visit + consultation (ביקור וייעוץ ללא עלות) by form, phone, or WhatsApp. Editorial Roei Deutsch /
 Wiz line — category-led, one ownable metaphor, meaningful motion — never generic SaaS.
 
 ## Audience
