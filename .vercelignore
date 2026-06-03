@@ -1,0 +1,6 @@
+node_modules
+.git
+.DS_Store
+assets/video-src/
+assets/hero-stock-*.mp4
+screenshots
