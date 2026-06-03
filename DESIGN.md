@@ -139,3 +139,12 @@ Lead color = orange; single bold accent = amber. No other hues.
   legibility of Suez One at small sizes (that's why small headings use Heebo). Confirm ח.פ., hours,
   warranty wording, the "500+" claim, and the exact geo coordinates before launch; wire the form to
   a real endpoint.
+
+## Round 5 updates (2026-06-03)
+- Booking modal `#bookModal`: two-panel on desktop (navy editorial aside + white form); on mobile a compact bottom-sheet (`@media max-width:760px { .modal place-items:end }`) - aside bullets/since hidden, fits one screen, no blank space. Aside warm glow softened (diffuse, blurred) so it reads as ambient heat, not a pasted sun. Triggers: any `[data-book]` element (header CTA, mobile-nav CTA, hero CTA).
+- Header logo uses `assets/logo-white.png` (white-subtext lockup) for legibility on the dark header - matches the footer logo.
+- Trust/logos band: centered column always; star icon flows inline-centered with the label (no off-center push). 4 manufacturer logos shown (6 brands named in copy; Prat+Nimrod logos pending).
+- Hero sun: animated - spinning rays + breathing disc (`@keyframes sunbreathe`) + low-opacity Lottie; disabled under `prefers-reduced-motion`.
+- Favicon = sun only (`assets/favicon.svg` navy badge + gold sun; PNG fallbacks `favicon-32.png`, `apple-touch-icon.png`). OG/Twitter image = branded `assets/og-image.png` (1200x630, navy + sun + white logo + headline), rendered via `scripts/utils/makor-assets-gen.js`.
+- WhatsApp links carry a friendly opener (`?text=...`) set at runtime on all static `wa.me` links; form-success links override with a contextual text on submit.
+- Icon consistency: hero primary (arrow) and hero phone (phone icon) both lead on the right (RTL leading edge); mobile-nav phone is a ghost button with the icon on the right.
