@@ -929,7 +929,7 @@
     });
   });
 
-  function wireLeadForm(form, successEl, waEl, anim){
+  function wireLeadForm(form, successEl, waEl, anim, source){
     if(!form) return;
     form.addEventListener("submit", function(e){
       e.preventDefault();
@@ -941,6 +941,7 @@
         return;
       }
       var addr=form.address?form.address.value.trim():"", msg=form.message?form.message.value.trim():"";
+      try{ fetch("https://alon-n8n.cloud/webhook/makor-lead",{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({name:name,phone:phone,address:addr,source:(source||"אתר מקור הטבע")+(msg?(" - "+msg):"")})}).catch(function(){}); }catch(err){}
       var text="שלום, אשמח לתיאום ביקור וייעוץ.%0Aשם: "+encodeURIComponent(name)+"%0Aטלפון: "+encodeURIComponent(phone);
       if(addr)text+="%0Aכתובת: "+encodeURIComponent(addr);
       if(msg)text+="%0A"+encodeURIComponent(msg);
@@ -950,8 +951,8 @@
       if(anim && !reduce){ try{ anim.goToAndPlay(0,true); }catch(e){} }
     });
   }
-  wireLeadForm(document.getElementById("leadForm"), document.getElementById("formSuccess"), document.getElementById("waContinue"), successAnim);
-  wireLeadForm(document.getElementById("bookForm"), document.getElementById("bookSuccess"), document.getElementById("bookWa"), null);
+  wireLeadForm(document.getElementById("leadForm"), document.getElementById("formSuccess"), document.getElementById("waContinue"), successAnim, "אתר - טופס יצירת קשר");
+  wireLeadForm(document.getElementById("bookForm"), document.getElementById("bookSuccess"), document.getElementById("bookWa"), null, "אתר - תיאום ביקור");
 
   (function(){
     var modal=document.getElementById("bookModal");
