@@ -183,6 +183,8 @@
   .header-phone{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700}
   .header-phone svg{width:17px;height:17px;color:var(--amber)}
   .header-cta .btn{padding:11px 20px;min-height:44px;font-size:.95rem}
+  .header-cta .btn-primary{box-shadow:0 2px 12px rgba(255,110,20,.32)}
+  .header-cta .btn-primary:hover{box-shadow:0 5px 16px rgba(255,120,30,.5)}
   .hamburger{display:none;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#fff;cursor:pointer;padding:8px;width:46px;height:46px}
   .hamburger svg{width:26px;height:26px}
 
@@ -196,8 +198,8 @@
     linear-gradient(to left,rgba(0,17,36,.95) 0%,rgba(0,21,44,.86) 34%,rgba(0,26,52,.52) 64%,rgba(0,28,58,.26) 100%),
     radial-gradient(120% 80% at 16% 20%,rgba(255,138,30,.16),transparent 55%),
     linear-gradient(to bottom,rgba(0,16,34,.55) 0%,transparent 24%,transparent 56%,rgba(0,14,30,.72) 100%)}
-  .hero__sun{position:absolute;z-index:-1;inset-inline-end:5%;inset-block-start:calc(var(--header-h) + 22px);width:clamp(112px,12vw,172px);aspect-ratio:1;pointer-events:none;opacity:.74}
-  .hero__sun .lot{position:absolute;inset:-44%;opacity:.5}
+  .hero__sun{position:absolute;z-index:-1;inset-inline-end:5%;inset-block-start:calc(var(--header-h) + 96px);width:clamp(104px,9vw,150px);aspect-ratio:1;pointer-events:none;opacity:.7}
+  .hero__sun .lot{position:absolute;inset:-32%;opacity:.4}
   .hero__sun .disc{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#FFE9BE,#FFB23E 56%,#FF7A1A 90%);box-shadow:0 0 34px rgba(255,165,55,.4),0 0 88px rgba(255,140,40,.24)}
   .hero__sun .rays{position:absolute;inset:0;animation:spin 70s linear infinite}
   .hero__sun .rays span{position:absolute;inset-inline-start:50%;inset-block-start:50%;width:3px;height:50%;background:linear-gradient(to top,transparent,rgba(255,200,110,0) 36%,rgba(255,200,110,.4));transform-origin:bottom center;border-radius:3px}
@@ -326,8 +328,8 @@
   .field label .req{color:var(--amber)}
   .field input,.field textarea{width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;background:var(--surface);transition:border-color .2s,box-shadow .2s,background .2s}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 4px rgba(255,178,62,.22);background:#fff}
-  #f-phone{text-align:start}
-  #f-phone:not(:placeholder-shown){direction:ltr;text-align:left}
+  #f-phone,#m-phone{direction:rtl;text-align:right}
+  #f-phone:not(:placeholder-shown),#m-phone:not(:placeholder-shown){direction:ltr;text-align:left}
   .field textarea{resize:vertical;min-height:96px}
   .consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:20px;font-size:.9rem;color:var(--muted)}
   .consent input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--orange)}
@@ -431,6 +433,41 @@
     .hero__sun .rays,.hl-ray,.hl-flow,.hl-flow-up,.eyebrow::before,.stats-band .timeline,.faq__item.open::before,.footer__divider{animation:none !important}
     .hero h1 .accent .hstroke path{animation:none !important;stroke-dashoffset:0 !important}
   }
+
+  /* Booking modal */
+  .modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}
+  .modal.open{opacity:1;visibility:visible}
+  .modal__overlay{position:absolute;inset:0;background:rgba(0,14,30,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .modal__dialog{position:relative;width:min(860px,100%);max-height:calc(100dvh - 40px);overflow:auto;display:grid;grid-template-columns:300px 1fr;background:#fff;border-radius:22px;box-shadow:0 40px 120px rgba(0,12,28,.5);transform:translateY(18px) scale(.98);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .modal.open .modal__dialog{transform:none}
+  .modal__x{position:absolute;inset-block-start:14px;inset-inline-end:14px;z-index:3;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:background .2s,transform .25s}
+  .modal__x:hover{background:rgba(255,255,255,.28);transform:rotate(90deg)}
+  .modal__x svg{width:18px;height:18px}
+  .modal__aside{position:relative;overflow:hidden;background:linear-gradient(165deg,#01356a,#001b3a 72%);color:#fff;padding:42px 30px;display:flex;flex-direction:column;justify-content:center}
+  .modal__aside::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 42% 38%,rgba(255,205,120,.55),rgba(255,140,40,.12) 58%,transparent 72%);inset-block-start:-74px;inset-inline-start:-66px}
+  .modal__aside-eyebrow{position:relative;font-weight:700;font-size:.8rem;letter-spacing:.03em;color:var(--amber);display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
+  .modal__dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 9px var(--amber)}
+  .modal__aside h3{position:relative;font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.25;margin:0 0 20px;text-wrap:balance}
+  .modal__bul{position:relative;list-style:none;display:flex;flex-direction:column;gap:12px;margin:0 0 24px;padding:0}
+  .modal__bul li{position:relative;padding-inline-start:30px;font-size:.97rem;color:rgba(255,255,255,.92);line-height:1.4}
+  .modal__bul li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:1px;width:20px;height:20px;border-radius:50%;background:rgba(255,178,62,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC36B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat}
+  .modal__since{position:relative;margin-top:auto;font-size:.84rem;color:rgba(255,255,255,.72);border-block-start:1px solid rgba(255,255,255,.15);padding-block-start:16px}
+  .modal__main{padding:clamp(28px,3vw,40px)}
+  .modal__main h3{font-family:var(--display);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.7rem);color:var(--navy);margin:0 0 6px}
+  .modal__lead{color:#5c6b7b;margin:0 0 20px;font-size:.98rem;line-height:1.6}
+  .modal .form-success{position:static;display:none;opacity:1;visibility:visible;text-align:center;padding:14px 0}
+  .modal .form-success.show{display:block}
+  body.modal-open{overflow:hidden}
+  @media (max-width:760px){
+    .modal{padding:0;place-items:stretch}
+    .modal__dialog{grid-template-columns:1fr;width:100%;max-height:100dvh;border-radius:0;transform:translateY(26px)}
+    .modal__aside{padding:48px 24px 22px}
+    .modal__aside h3{font-size:1.32rem;margin-bottom:14px}
+    .modal__bul{flex-direction:row;flex-wrap:wrap;gap:8px 18px;margin-bottom:4px}
+    .modal__bul li{font-size:.86rem;padding-inline-start:26px}
+    .modal__since{display:none}
+    .modal__x{background:rgba(0,0,0,.2)}
+  }
 </style>
 </head>
 <body>
@@ -444,7 +481,7 @@
     </nav>
     <div class="header-cta">
       <a class="header-phone ltr" href="tel:+972544802380" aria-label="התקשרו 054-480-2380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>054-480-2380</a>
-      <a class="btn btn-primary" href="#contact">קבלו ייעוץ חינם</a>
+      <a class="btn btn-primary" href="#contact" data-book>קבלו ייעוץ חינם</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="פתחו תפריט" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
@@ -454,7 +491,7 @@
   <div class="mnav__panel">
     <button class="mnav__close" id="mnavClose" aria-label="סגרו תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a>
-    <a class="btn btn-primary" href="#contact">קבלו ייעוץ חינם</a>
+    <a class="btn btn-primary" href="#contact" data-book>קבלו ייעוץ חינם</a>
     <a class="header-phone ltr" style="color:#fff;margin-top:8px;padding:12px" href="tel:+972544802380">054-480-2380</a>
   </div>
 </div>
@@ -473,7 +510,7 @@
       <h1><span>מים חמים לכל&nbsp;דייר.</span><span><span class="accent">שקט נפשי<svg class="hstroke" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M3 16 C 52 7, 96 19, 140 12 C 182 6, 216 16, 237 10"/></svg></span> לכל&nbsp;ועד.</span></h1>
       <p class="hero__sub">תכנון, הקמה, שיקום ותחזוקה של מערכות סולאריות מרכזיות לחימום מים בבתים משותפים - בסטנדרט הנדסי גבוה, באחריות מלאה, ובשירות שלא נגמר ביום&nbsp;ההתקנה.</p>
       <div class="hero__actions">
-        <a class="btn btn-primary" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>לתיאום ביקור וייעוץ ללא&nbsp;עלות</a>
+        <a class="btn btn-primary" href="#contact" data-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>לתיאום ביקור וייעוץ ללא&nbsp;עלות</a>
         <a class="btn btn-ghost ltr" href="tel:+972544802380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>054-480-2380</a>
       </div>
       <div class="hero__stats">
@@ -623,7 +660,7 @@
           <h3>בקשת ביקור וייעוץ חינם</h3>
           <p>נחזור אליכם עוד היום עם המלצה ראשונית.</p>
           <div class="field"><label for="f-name">שם מלא <span class="req">*</span></label><input id="f-name" name="name" type="text" placeholder="ישראל ישראלי" required autocomplete="name" /></div>
-          <div class="field"><label for="f-phone">טלפון <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" placeholder="הזינו מספר טלפון" required autocomplete="tel" /></div>
+          <div class="field"><label for="f-phone">טלפון <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" placeholder="הזינו את מספר הטלפון שלכם" required autocomplete="tel" /></div>
           <div class="field"><label for="f-addr">כתובת הבניין</label><input id="f-addr" name="address" type="text" placeholder="רחוב, מספר, עיר" autocomplete="street-address" /></div>
           <div class="field"><label for="f-msg">איך נוכל לעזור?</label><textarea id="f-msg" name="message" placeholder="לדוגמה: בניין בן 12 דירות, אין מים חמים בקומות העליונות..."></textarea></div>
           <label class="consent"><input type="checkbox" id="f-consent" required /><span>אני מאשר/ת שניתן ליצור איתי קשר בנוגע לפנייה זו.</span></label>
@@ -684,6 +721,40 @@
 
 <a class="wa-float" href="https://wa.me/972544802380" target="_blank" rel="noopener" aria-label="שלחו לנו הודעה בוואטסאפ"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.276l-.999 3.648 3.969-1.223zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 
+<div class="modal" id="bookModal" aria-hidden="true">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+    <button class="modal__x" type="button" aria-label="סגירת החלון" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <aside class="modal__aside">
+      <span class="modal__aside-eyebrow"><span class="modal__dot" aria-hidden="true"></span>ללא עלות · ללא התחייבות</span>
+      <h3>תיאום ביקור וייעוץ מקצועי לבניין&nbsp;שלכם</h3>
+      <ul class="modal__bul">
+        <li>בדיקה בגג ובחדר הדודים</li>
+        <li>הצעה מפורטת וברורה לוועד</li>
+        <li>מענה אנושי עוד היום</li>
+      </ul>
+      <div class="modal__since">מאז 1963 · מעל 60 שנות ניסיון · אחריות מלאה</div>
+    </aside>
+    <div class="modal__main">
+      <h3 id="bookTitle">בקשת ביקור וייעוץ חינם</h3>
+      <p class="modal__lead">השאירו פרטים ונחזור אליכם עוד היום עם המלצה&nbsp;ראשונית.</p>
+      <form id="bookForm" novalidate>
+        <div class="field"><label for="m-name">שם מלא <span class="req">*</span></label><input id="m-name" name="name" type="text" placeholder="ישראל ישראלי" required autocomplete="name" /></div>
+        <div class="field"><label for="m-phone">טלפון <span class="req">*</span></label><input id="m-phone" name="phone" type="tel" placeholder="הזינו את מספר הטלפון שלכם" required autocomplete="tel" /></div>
+        <div class="field"><label for="m-addr">כתובת הבניין</label><input id="m-addr" name="address" type="text" placeholder="רחוב, מספר, עיר" autocomplete="street-address" /></div>
+        <div class="field"><label for="m-msg">איך נוכל לעזור?</label><textarea id="m-msg" name="message" placeholder="לדוגמה: בניין בן 12 דירות, אין מים חמים בקומות העליונות..."></textarea></div>
+        <label class="consent"><input type="checkbox" id="m-consent" required /><span>אני מאשר/ת שניתן ליצור איתי קשר בנוגע לפנייה זו.</span></label>
+        <button class="btn btn-primary" type="submit">שליחת הפנייה</button>
+      </form>
+      <div class="form-success" id="bookSuccess" role="status" aria-live="polite">
+        <h3>תודה! קיבלנו את הפנייה</h3>
+        <p>נחזור אליכם בהקדם עם ייעוץ ראשוני. לפנייה דחופה אפשר גם בוואטסאפ.</p>
+        <a class="btn btn-primary" id="bookWa" href="https://wa.me/972544802380" target="_blank" rel="noopener">המשך בוואטסאפ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 <script>
 (function(){
@@ -736,6 +807,7 @@
 
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener("click", function(e){
+      if(a.hasAttribute("data-book")) return;
       var id=a.getAttribute("href"); if(id.length<2) return;
       var t=document.querySelector(id); if(!t) return; e.preventDefault();
       var y=t.getBoundingClientRect().top+window.scrollY-66;
@@ -777,24 +849,51 @@
     });
   });
 
-  var form=document.getElementById("leadForm");
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    var name=form.name.value.trim(), phone=form.phone.value.trim(), consent=document.getElementById("f-consent").checked;
-    if(!name||!phone||!consent){
-      if(!name)form.name.focus(); else if(!phone)form.phone.focus(); else document.getElementById("f-consent").focus();
-      form.querySelectorAll("[required]").forEach(function(f){ if((f.type==="checkbox"&&!f.checked)||(f.type!=="checkbox"&&!f.value.trim()))f.style.borderColor="#C00000"; else f.style.borderColor=""; });
-      return;
+  function wireLeadForm(form, successEl, waEl, anim){
+    if(!form) return;
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var consentEl=form.querySelector('input[type="checkbox"]');
+      var name=form.name.value.trim(), phone=form.phone.value.trim(), consent=consentEl?consentEl.checked:true;
+      if(!name||!phone||!consent){
+        if(!name)form.name.focus(); else if(!phone)form.phone.focus(); else if(consentEl)consentEl.focus();
+        form.querySelectorAll("[required]").forEach(function(f){ if((f.type==="checkbox"&&!f.checked)||(f.type!=="checkbox"&&!f.value.trim()))f.style.borderColor="#C00000"; else f.style.borderColor=""; });
+        return;
+      }
+      var addr=form.address?form.address.value.trim():"", msg=form.message?form.message.value.trim():"";
+      var text="שלום, אשמח לתיאום ביקור וייעוץ.%0Aשם: "+encodeURIComponent(name)+"%0Aטלפון: "+encodeURIComponent(phone);
+      if(addr)text+="%0Aכתובת: "+encodeURIComponent(addr);
+      if(msg)text+="%0A"+encodeURIComponent(msg);
+      if(waEl)waEl.href="https://wa.me/972544802380?text="+text;
+      form.style.display="none";
+      if(successEl)successEl.classList.add("show");
+      if(anim && !reduce){ try{ anim.goToAndPlay(0,true); }catch(e){} }
+    });
+  }
+  wireLeadForm(document.getElementById("leadForm"), document.getElementById("formSuccess"), document.getElementById("waContinue"), successAnim);
+  wireLeadForm(document.getElementById("bookForm"), document.getElementById("bookSuccess"), document.getElementById("bookWa"), null);
+
+  (function(){
+    var modal=document.getElementById("bookModal");
+    if(!modal) return;
+    var lastFocus=null;
+    function openModal(){
+      lastFocus=document.activeElement;
+      modal.classList.add("open"); modal.setAttribute("aria-hidden","false");
+      document.body.classList.add("modal-open");
+      setTimeout(function(){ try{ (document.getElementById("m-name")||modal.querySelector("input,button")).focus(); }catch(e){} }, 70);
     }
-    var addr=form.address.value.trim(), msg=form.message.value.trim();
-    var text="שלום, אשמח לתיאום ביקור וייעוץ.%0Aשם: "+encodeURIComponent(name)+"%0Aטלפון: "+encodeURIComponent(phone);
-    if(addr)text+="%0Aכתובת: "+encodeURIComponent(addr);
-    if(msg)text+="%0A"+encodeURIComponent(msg);
-    document.getElementById("waContinue").href="https://wa.me/972544802380?text="+text;
-    form.style.display="none";
-    document.getElementById("formSuccess").classList.add("show");
-    if(successAnim && !reduce){ try{ successAnim.goToAndPlay(0,true); }catch(e){} }
-  });
+    function closeModal(){
+      modal.classList.remove("open"); modal.setAttribute("aria-hidden","true");
+      document.body.classList.remove("modal-open");
+      if(lastFocus){ try{ lastFocus.focus(); }catch(e){} }
+    }
+    document.querySelectorAll("[data-book]").forEach(function(b){
+      b.addEventListener("click", function(e){ e.preventDefault(); try{ closeNav(); }catch(_){} openModal(); });
+    });
+    modal.querySelectorAll("[data-close]").forEach(function(c){ c.addEventListener("click", closeModal); });
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && modal.classList.contains("open")) closeModal(); });
+  })();
 })();
 </script>
 </body>
