@@ -82,7 +82,7 @@
   "inLanguage": "he-IL",
   "isPartOf": { "@type": "WebSite", "name": "מקור הטבע", "url": "https://www.makorhateva.com/" },
   "about": { "@id": "https://www.makorhateva.com/#business" },
-  "dateModified": "2026-06-02"
+  "dateModified": "2026-06-03"
 }
 </script>
 <script type="application/ld+json">
@@ -95,7 +95,7 @@
     {"@type":"Question","name":"מה כוללת האחריות?","acceptedAnswer":{"@type":"Answer","text":"אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי."}},
     {"@type":"Question","name":"מי אחראי על תחזוקת המערכת?","acceptedAnswer":{"@type":"Answer","text":"אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד."}},
     {"@type":"Question","name":"המים לא מתחממים - מה עושים?","acceptedAnswer":{"@type":"Answer","text":"מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם."}},
-    {"@type":"Question","name":"באילו יצרנים אתם עובדים?","acceptedAnswer":{"@type":"Answer","text":"רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת."}},
+    {"@type":"Question","name":"באילו יצרנים אתם עובדים?","acceptedAnswer":{"@type":"Answer","text":"רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, אידיאל וטל סחר - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת."}},
     {"@type":"Question","name":"באילו אזורים אתם נותנים שירות?","acceptedAnswer":{"@type":"Answer","text":"אנחנו פועלים בכל מרכז הארץ - רמת גן, גבעתיים, תל אביב, בני ברק, גבעת שמואל, קרית אונו, פתח תקווה והסביבה. מוזמנים להרים טלפון ולבדוק זמינות לכתובת שלכם."}}
   ]
 }
@@ -124,7 +124,7 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   img{max-width:100%;height:auto;display:block}
   a{color:inherit;text-decoration:none}
-  h1,h2{margin:0;font-family:var(--display);font-weight:400;line-height:1.14;letter-spacing:-.005em;text-wrap:balance}
+  h1,h2{margin:0;font-family:var(--display);font-weight:400;line-height:1.16;letter-spacing:-.005em;text-wrap:balance}
   h3,h4{margin:0;font-family:var(--body);font-weight:800;line-height:1.22;letter-spacing:-.01em;text-wrap:balance}
   p{margin:0;text-wrap:pretty}
   ul{margin:0;padding:0;list-style:none}
@@ -196,7 +196,7 @@
     linear-gradient(to left,rgba(0,17,36,.95) 0%,rgba(0,21,44,.86) 34%,rgba(0,26,52,.52) 64%,rgba(0,28,58,.26) 100%),
     radial-gradient(120% 80% at 16% 20%,rgba(255,138,30,.16),transparent 55%),
     linear-gradient(to bottom,rgba(0,16,34,.55) 0%,transparent 24%,transparent 56%,rgba(0,14,30,.72) 100%)}
-  .hero__sun{position:absolute;z-index:-1;inset-inline-end:4%;inset-block-start:6%;width:clamp(120px,13vw,190px);aspect-ratio:1;pointer-events:none;opacity:.74}
+  .hero__sun{position:absolute;z-index:-1;inset-inline-end:5%;inset-block-start:calc(var(--header-h) + 22px);width:clamp(112px,12vw,172px);aspect-ratio:1;pointer-events:none;opacity:.74}
   .hero__sun .lot{position:absolute;inset:-44%;opacity:.5}
   .hero__sun .disc{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#FFE9BE,#FFB23E 56%,#FF7A1A 90%);box-shadow:0 0 34px rgba(255,165,55,.4),0 0 88px rgba(255,140,40,.24)}
   .hero__sun .rays{position:absolute;inset:0;animation:spin 70s linear infinite}
@@ -226,7 +226,8 @@
   .hero__stats .stat:first-child{border-inline-start:0}
   .hero__stats .num{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,2.3vw,2rem);color:var(--amber);line-height:1;direction:ltr;unicode-bidi:isolate}
   .hero__stats .lbl{margin-top:8px;font-size:.84rem;color:rgba(255,255,255,.78);font-weight:600;line-height:1.3}
-  .scroll-cue{position:absolute;inset-block-end:24px;inset-inline:0;margin-inline:auto;width:max-content;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:.76rem;font-weight:600}
+  .scroll-cue{position:absolute;inset-block-end:24px;inset-inline:0;margin-inline:auto;width:max-content;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:.76rem;font-weight:600;cursor:pointer;transition:color .2s,transform .2s}
+  .scroll-cue:hover{color:#fff;transform:translateY(3px)}
   .scroll-cue .mouse{width:25px;height:40px;border:2px solid rgba(255,255,255,.6);border-radius:14px;position:relative}
   .scroll-cue .mouse::after{content:"";position:absolute;inset-block-start:7px;inset-inline:0;margin-inline:auto;width:4px;height:8px;border-radius:3px;background:#fff;animation:wheel 1.8s ease-in-out infinite}
   @keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}60%{opacity:1;transform:translateY(10px)}100%{opacity:0;transform:translateY(12px)}}
@@ -236,9 +237,9 @@
   .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;padding-block:24px}
   .trust__label{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9);flex:1 1 260px;min-width:0;display:flex;align-items:center;gap:10px}
   .trust__label svg{width:20px;height:20px;color:var(--amber);flex:none}
-  .trust__logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
-  .trust__logos .plate{background:#fff;border-radius:9px;padding:9px 16px;display:flex;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.2)}
-  .trust__logos .plate img{height:26px;width:auto;display:block}
+  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(22px,4.2vw,50px);align-items:center;justify-content:center}
+  .trust__logos img{height:34px;width:auto;display:block;transition:transform .3s ease;filter:drop-shadow(0 1px 4px rgba(0,0,0,.25))}
+  .trust__logos img:hover{transform:scale(1.07)}
 
   /* Services */
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
@@ -311,9 +312,10 @@
   .ci:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
   .ci__icon{flex:none;width:50px;height:50px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,119,192,.12),rgba(255,96,0,.12));color:var(--navy)}
   .ci__icon svg{width:24px;height:24px}
-  .ci__main{font-weight:700;color:var(--navy);font-size:1.06rem}
+  .ci__main{display:block;font-weight:700;color:var(--navy);font-size:1.06rem}
   .ci__main.ltr{white-space:nowrap}
-  .ci__sub{color:var(--muted);font-size:.9rem;margin-top:2px}
+  .ci__sub{display:block;margin-top:5px;line-height:1.5}
+  .ci__sub{color:var(--muted);font-size:.9rem}
   .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,3vw,40px);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
   .form-card::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:6px;background:linear-gradient(90deg,var(--orange),var(--amber))}
   .form-card::after{content:"";position:absolute;inset-block-start:6px;inset-inline-end:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,178,62,.16),transparent 68%);pointer-events:none}
@@ -324,6 +326,8 @@
   .field label .req{color:var(--amber)}
   .field input,.field textarea{width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;background:var(--surface);transition:border-color .2s,box-shadow .2s,background .2s}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 4px rgba(255,178,62,.22);background:#fff}
+  #f-phone{text-align:start}
+  #f-phone:not(:placeholder-shown){direction:ltr;text-align:left}
   .field textarea{resize:vertical;min-height:96px}
   .consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:20px;font-size:.9rem;color:var(--muted)}
   .consent input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--orange)}
@@ -349,7 +353,7 @@
 
   /* Footer (centered) */
   .footer{background:var(--navy-deep);color:rgba(255,255,255,.78);padding-block:clamp(52px,6vw,76px) 28px;position:relative;overflow:hidden;text-align:center}
-  .footer__top{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:clamp(30px,4vw,58px);position:relative;z-index:1;text-align:center}
+  .footer__top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(30px,4vw,58px);position:relative;z-index:1;text-align:center;justify-items:center}
   .footer__brand{display:flex;flex-direction:column;align-items:center}
   .footer__brand img{height:56px;width:auto;margin-bottom:18px}
   .footer__brand p{font-size:1rem;max-width:340px;line-height:1.7;text-wrap:balance}
@@ -400,7 +404,7 @@
     .hero__stats .stat{flex:1 1 40%;min-width:0;border-block-start:1px solid rgba(255,255,255,.12)}
     .hero__stats .stat:nth-child(-n+2){border-block-start:0}
     .hero__stats .stat:nth-child(odd){border-inline-start:0}
-    .hero__sun{inset-inline-end:auto;inset-inline-start:38%;inset-block-start:12px;width:50px;opacity:.62}
+    .hero__sun{inset-inline-start:auto;inset-inline-end:6%;inset-block-start:96px;width:50px;opacity:.6}
     .hero__sun .rays,.hero__sun .lot{display:none}
     .hero__sun .disc{box-shadow:0 0 16px rgba(255,165,55,.5),0 0 38px rgba(255,140,40,.26)}
     .scroll-cue{display:none}
@@ -480,16 +484,17 @@
       </div>
     </div>
   </div>
-  <div class="scroll-cue" aria-hidden="true"><span class="mouse"></span><span>גללו</span></div>
+  <a class="scroll-cue" href="#trust" aria-label="גללו למטה"><span class="mouse"></span><span>גללו</span></a>
 </section>
 
-<div class="trust">
+<div class="trust" id="trust">
   <div class="container">
     <span class="trust__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.3 2.3 7.3-6.3-4.6-6.3 4.6L8 13.7 2 9.4h7.6z"/></svg><span style="text-wrap:balance">עובדים עם יצרני הקולטים והדודים המובילים&nbsp;בישראל</span></span>
     <div class="trust__logos">
-      <span class="plate"><img src="assets/logos/chromagen.png" alt="כרומגן" height="26" loading="lazy" /></span>
-      <span class="plate"><img src="assets/logos/amcor.webp" alt="אמקור" height="26" loading="lazy" /></span>
-      <span class="plate"><img src="assets/logos/ideal.png" alt="אידיאל" height="26" loading="lazy" /></span>
+      <img src="assets/logos/chromagen.png" alt="כרומגן" height="30" loading="lazy" />
+      <img src="assets/logos/amcor.webp" alt="אמקור" height="30" loading="lazy" />
+      <img src="assets/logos/ideal.png" alt="אידאל" height="30" loading="lazy" />
+      <img src="assets/logos/tal-sahar.png" alt="טל סחר" height="30" loading="lazy" />
     </div>
   </div>
 </div>
@@ -523,7 +528,7 @@
       <div class="why-item"><h3>אחריות מלאה 100%</h3><p>אחריות כתובה על העבודה ועל הציוד, עם התחייבות ברורה לזמני תגובה ולתיקון.</p></div>
       <div class="why-item"><h3>צוות הנדסי מוסמך</h3><p>תכנון מקצועי לפי תקן, התאמת המערכת לעומס האמיתי של הבניין וביצוע נקי ובטיחותי.</p></div>
       <div class="why-item"><h3>שירות שזמין באמת</h3><p>איש קשר אחד, מענה מהיר בטלפון ובוואטסאפ, והגעה לשטח גם כשצריך אתמול.</p></div>
-      <div class="why-item"><h3>ציוד של יצרנים מובילים</h3><p>עובדים רק עם קולטים ודודים מתוצרת חברות מובילות - כרומגן, אמקור ואידיאל.</p></div>
+      <div class="why-item"><h3>ציוד של יצרנים מובילים</h3><p>עובדים רק עם קולטים ודודים מתוצרת חברות מובילות - כרומגן, אמקור, אידיאל וטל סחר.</p></div>
       <div class="why-item"><h3>פתרון מקצה לקצה</h3><p>מהביקור הראשוני, דרך התכנון וההקמה ועד התחזוקה השוטפת - הכל תחת קורת גג אחת.</p></div>
     </div>
   </div>
@@ -592,7 +597,6 @@
 <section class="stats-band" aria-label="נתונים על מקור הטבע">
   <span class="glow" style="width:520px;height:300px;background:rgba(255,160,50,.18);inset-inline-start:50%;transform:translateX(-50%);inset-block-start:-80px"></span>
   <div class="container">
-    <div class="timeline" aria-hidden="true"></div>
     <div class="stat-big reveal"><div class="num" data-count="1963" data-plain="1">1963</div><div class="lbl">שנת ההקמה</div></div>
     <div class="stat-big reveal" data-d="1"><div class="num" data-count="60" data-suffix="+">60+</div><div class="lbl">שנות ניסיון</div></div>
     <div class="stat-big reveal" data-d="2"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">אחריות על העבודה</div></div>
@@ -619,7 +623,7 @@
           <h3>בקשת ביקור וייעוץ חינם</h3>
           <p>נחזור אליכם עוד היום עם המלצה ראשונית.</p>
           <div class="field"><label for="f-name">שם מלא <span class="req">*</span></label><input id="f-name" name="name" type="text" placeholder="ישראל ישראלי" required autocomplete="name" /></div>
-          <div class="field"><label for="f-phone">טלפון <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" dir="ltr" placeholder="050-0000000" required autocomplete="tel" /></div>
+          <div class="field"><label for="f-phone">טלפון <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" placeholder="הזינו מספר טלפון" required autocomplete="tel" /></div>
           <div class="field"><label for="f-addr">כתובת הבניין</label><input id="f-addr" name="address" type="text" placeholder="רחוב, מספר, עיר" autocomplete="street-address" /></div>
           <div class="field"><label for="f-msg">איך נוכל לעזור?</label><textarea id="f-msg" name="message" placeholder="לדוגמה: בניין בן 12 דירות, אין מים חמים בקומות העליונות..."></textarea></div>
           <label class="consent"><input type="checkbox" id="f-consent" required /><span>אני מאשר/ת שניתן ליצור איתי קשר בנוגע לפנייה זו.</span></label>
@@ -638,8 +642,8 @@
 
 <section class="section how" id="faq">
   <div class="container">
-    <div class="section-head reveal" style="margin-inline:auto;text-align:center">
-      <span class="eyebrow center">שאלות ותשובות</span>
+    <div class="section-head reveal">
+      <span class="eyebrow">שאלות ותשובות</span>
       <h2>כל מה שוועד צריך&nbsp;לדעת</h2>
     </div>
     <div class="faq__list">
@@ -648,7 +652,7 @@
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מה כוללת האחריות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אחריות כתובה על העבודה שביצענו ועל הציוד שהותקן, לצד התחייבות לזמני תגובה. אנחנו מלווים את המערכת גם אחרי תום ההתקנה ומספקים שירות תחזוקה תקופתי.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>מי אחראי על תחזוקת המערכת?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אנחנו. מומלץ לבצע תחזוקה תקופתית - ניקוי קולטים, בדיקת לחצים והחלפת רכיבים מתכלים - וכך מאריכים משמעותית את חיי המערכת ומונעים תקלות. ניתן לסגור מסלול תחזוקה קבוע לוועד.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>המים לא מתחממים - מה עושים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>מרימים טלפון. רוב התקלות (גוף חימום, משאבת סחרור, ברז ערבוב) ניתנות לאבחון מהיר וזמין. אנחנו מגיעים לשטח, מאתרים את הסיבה ומחזירים מים חמים בהקדם.</p></div></div>
-      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור ואידיאל - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div></div>
+      <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו יצרנים אתם עובדים?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>רק בקולטים ובדודים מתוצרת חברות מובילות ומאושרות בישראל - בהן כרומגן, אמקור, אידיאל וטל סחר - כדי להבטיח אמינות, זמינות חלפים ואורך חיים ארוך למערכת.</p></div></div>
       <div class="faq__item reveal"><button class="faq__q" aria-expanded="false"><span>באילו אזורים אתם נותנים שירות?</span><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq__a"><p>אנחנו פועלים בכל מרכז הארץ - רמת גן, גבעתיים, תל אביב, בני ברק, גבעת שמואל, קרית אונו, פתח תקווה והסביבה. מוזמנים להרים טלפון ולבדוק זמינות לכתובת שלכם.</p></div></div>
     </div>
   </div>
@@ -663,7 +667,7 @@
       <div class="footer__brand">
         <img src="assets/logo-white.png" alt="מקור הטבע" width="160" height="56" />
         <p>מומחים למערכות סולאריות מרכזיות ודודי שמש - לבתים משותפים ולבנייה פרטית במרכז הארץ. מאז 1963.</p>
-        <div class="footer__chips"><span>כרומגן</span><span>אמקור</span><span>אידיאל</span></div>
+        <div class="footer__chips"><span>כרומגן</span><span>אמקור</span><span>אידאל</span><span>טל סחר</span></div>
       </div>
       <div class="footer__col"><h4>ניווט</h4><a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a></div>
       <div class="footer__col"><h4>יצירת קשר</h4><a class="ltr" href="tel:+972544802380">054-480-2380 · 03-677-7935</a><a class="ltr" href="mailto:makorhateva1@gmail.com">makorhateva1@gmail.com</a><span class="line">רח' עוזיאל 63, רמת גן</span><a href="https://wa.me/972544802380" target="_blank" rel="noopener">וואטסאפ</a></div>

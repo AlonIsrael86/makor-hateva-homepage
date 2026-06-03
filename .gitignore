@@ -1,3 +1,6 @@
 node_modules
 .vercel
 .DS_Store
+
+# Large stock-video masters + intermediates - keep local, never commit (only hero-loop.* is deployed)
+assets/hero-stock-*.mp4
