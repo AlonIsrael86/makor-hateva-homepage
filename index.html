@@ -852,7 +852,14 @@
 
   try{
     var saveData = navigator.connection && navigator.connection.saveData;
-    // Background stays the calm rooftop still (hero.jpg); the real field footage is the only hero motion.
+    // Background hero loop - fade the looping footage in over the poster still (hero.jpg).
+    var heroVid=document.getElementById("heroVid");
+    if(heroVid && !reduce && !saveData){
+      heroVid.preload="auto";
+      var showHeroVid=function(){ heroVid.classList.add("ready"); var hp=heroVid.play(); if(hp&&hp.catch)hp.catch(function(){}); };
+      heroVid.addEventListener("canplay", showHeroVid, {once:true});
+      heroVid.load();
+    }
     // Real field footage (portrait) - reveal on load, play while in view
     var heroMedia=document.getElementById("heroMedia"), fieldVid=document.getElementById("fieldVid");
     if(heroMedia){ setTimeout(function(){ heroMedia.classList.add("in"); }, 160); }
