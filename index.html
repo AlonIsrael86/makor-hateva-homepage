@@ -8,19 +8,25 @@
 <meta name="robots" content="noindex, nofollow" />
 <link rel="canonical" href="https://www.makorhateva.com/" />
 <link rel="alternate" hreflang="he-IL" href="https://www.makorhateva.com/" />
-<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="alternate icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="mask-icon" href="assets/favicon.svg" color="#FF7A1A" />
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="he_IL" />
 <meta property="og:site_name" content="מקור הטבע" />
 <meta property="og:title" content="מקור הטבע | מערכות סולאריות מרכזיות לחימום מים מאז 1963" />
 <meta property="og:description" content="מומחים במערכות סולאריות מרכזיות לחימום מים לבתים משותפים ולבנייה פרטית במרכז הארץ. מעל 60 שנות ניסיון, אחריות מלאה." />
-<meta property="og:image" content="assets/hero.jpg" />
+<meta property="og:image" content="assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="מקור הטבע - מערכות סולאריות מרכזיות לחימום מים מאז 1963" />
 <meta property="og:url" content="https://www.makorhateva.com/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="מקור הטבע | מערכות סולאריות מרכזיות לחימום מים מאז 1963" />
 <meta name="twitter:description" content="מומחים במערכות סולאריות מרכזיות לחימום מים לבתים משותפים ולבנייה פרטית. מעל 60 שנות ניסיון." />
-<meta name="twitter:image" content="assets/hero.jpg" />
+<meta name="twitter:image" content="assets/og-image.png" />
 <meta name="theme-color" content="#002F5E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -202,10 +208,11 @@
     radial-gradient(120% 80% at 16% 20%,rgba(255,138,30,.16),transparent 55%),
     linear-gradient(to bottom,rgba(0,16,34,.55) 0%,transparent 24%,transparent 56%,rgba(0,14,30,.72) 100%)}
   .hero__sun{position:absolute;z-index:-1;inset-inline-end:5%;inset-block-start:calc(var(--header-h) + 96px);width:clamp(104px,9vw,150px);aspect-ratio:1;pointer-events:none;opacity:.7}
-  .hero__sun .lot{position:absolute;inset:-32%;opacity:.4}
-  .hero__sun .disc{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#FFE9BE,#FFB23E 56%,#FF7A1A 90%);box-shadow:0 0 34px rgba(255,165,55,.4),0 0 88px rgba(255,140,40,.24)}
-  .hero__sun .rays{position:absolute;inset:0;animation:spin 70s linear infinite}
-  .hero__sun .rays span{position:absolute;inset-inline-start:50%;inset-block-start:50%;width:3px;height:50%;background:linear-gradient(to top,transparent,rgba(255,200,110,0) 36%,rgba(255,200,110,.4));transform-origin:bottom center;border-radius:3px}
+  .hero__sun .lot{position:absolute;inset:-32%;opacity:.5}
+  .hero__sun .disc{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#FFE9BE,#FFB23E 56%,#FF7A1A 90%);box-shadow:0 0 34px rgba(255,165,55,.45),0 0 88px rgba(255,140,40,.26);animation:sunbreathe 5.5s ease-in-out infinite}
+  @keyframes sunbreathe{0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(255,165,55,.4),0 0 80px rgba(255,140,40,.22)}50%{transform:scale(1.07);box-shadow:0 0 46px rgba(255,182,72,.6),0 0 112px rgba(255,150,50,.36)}}
+  .hero__sun .rays{position:absolute;inset:0;animation:spin 55s linear infinite}
+  .hero__sun .rays span{position:absolute;inset-inline-start:50%;inset-block-start:50%;width:3px;height:50%;background:linear-gradient(to top,transparent,rgba(255,200,110,0) 30%,rgba(255,205,120,.6));transform-origin:bottom center;border-radius:3px}
   @keyframes spin{to{transform:rotate(360deg)}}
   .hero .container{width:100%;padding-block:calc(var(--header-h) + 30px) 92px}
   .hero__inner{max-width:660px;margin-inline-start:0}
@@ -239,11 +246,11 @@
 
   /* Trust */
   .trust{background:var(--navy-deep);color:#fff;border-block-end:1px solid rgba(255,255,255,.06)}
-  .trust .container{display:flex;align-items:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;padding-block:24px}
-  .trust__label{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9);flex:1 1 260px;min-width:0;display:flex;align-items:center;gap:10px}
-  .trust__label svg{width:20px;height:20px;color:var(--amber);flex:none}
-  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(22px,4.2vw,50px);align-items:center;justify-content:center}
-  .trust__logos img{height:34px;width:auto;display:block;transition:transform .3s ease;filter:drop-shadow(0 1px 4px rgba(0,0,0,.25))}
+  .trust .container{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;padding-block:30px}
+  .trust__label{font-weight:700;font-size:.96rem;color:rgba(255,255,255,.9);max-width:600px;display:block;text-align:center;text-wrap:balance}
+  .trust__label svg{width:18px;height:18px;color:var(--amber);display:inline-block;vertical-align:-3px;margin-inline-end:8px}
+  .trust__logos{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,56px);align-items:center;justify-content:center}
+  .trust__logos img{height:36px;width:auto;display:block;transition:transform .3s ease;filter:drop-shadow(0 1px 4px rgba(0,0,0,.25))}
   .trust__logos img:hover{transform:scale(1.07)}
 
   /* Services */
@@ -429,11 +436,14 @@
   .mnav a{color:#fff;font-weight:600;font-size:1.1rem;padding:14px 12px;border-radius:10px}
   .mnav a:hover{background:rgba(255,255,255,.1)}
   .mnav .btn{margin-top:14px}
+  .mnav__phone{margin-top:10px;width:100%;justify-content:center;font-weight:800;font-size:1.05rem}
+  .mnav__phone .ltr{direction:ltr;unicode-bidi:isolate}
+  .mnav__phone svg{color:var(--amber)}
 
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
     .reveal{opacity:1;transform:none}
-    .hero__sun .rays,.hl-ray,.hl-flow,.hl-flow-up,.eyebrow::before,.stats-band .timeline,.faq__item.open::before,.footer__divider{animation:none !important}
+    .hero__sun .rays,.hero__sun .disc,.hl-ray,.hl-flow,.hl-flow-up,.eyebrow::before,.stats-band .timeline,.faq__item.open::before,.footer__divider{animation:none !important}
     .hero h1 .accent .hstroke path{animation:none !important;stroke-dashoffset:0 !important}
   }
 
@@ -447,14 +457,14 @@
   .modal__x:hover{background:rgba(255,255,255,.28);transform:rotate(90deg)}
   .modal__x svg{width:18px;height:18px}
   .modal__aside{position:relative;overflow:hidden;background:linear-gradient(165deg,#01356a,#001b3a 72%);color:#fff;padding:42px 30px;display:flex;flex-direction:column;justify-content:center}
-  .modal__aside::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 42% 38%,rgba(255,205,120,.55),rgba(255,140,40,.12) 58%,transparent 72%);inset-block-start:-74px;inset-inline-start:-66px}
+  .modal__aside::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 40% 38%,rgba(255,198,110,.32),rgba(255,150,50,.07) 52%,transparent 70%);inset-block-start:-130px;inset-inline-start:-98px;filter:blur(8px);pointer-events:none}
   .modal__aside-eyebrow{position:relative;font-weight:700;font-size:.8rem;letter-spacing:.03em;color:var(--amber);display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
   .modal__dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 9px var(--amber)}
   .modal__aside h3{position:relative;font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.25;margin:0 0 20px;text-wrap:balance}
   .modal__bul{position:relative;list-style:none;display:flex;flex-direction:column;gap:12px;margin:0 0 24px;padding:0}
   .modal__bul li{position:relative;padding-inline-start:30px;font-size:.97rem;color:rgba(255,255,255,.92);line-height:1.4}
   .modal__bul li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:1px;width:20px;height:20px;border-radius:50%;background:rgba(255,178,62,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC36B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat}
-  .modal__since{position:relative;margin-top:auto;font-size:.84rem;color:rgba(255,255,255,.72);border-block-start:1px solid rgba(255,255,255,.15);padding-block-start:16px}
+  .modal__since{position:relative;margin-top:auto;font-size:.84rem;color:rgba(255,255,255,.72);border-block-start:1px solid rgba(255,255,255,.15);padding-block-start:16px;text-wrap:balance}
   .modal__main{padding:clamp(28px,3vw,40px)}
   .modal__main h3{font-family:var(--display);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.7rem);color:var(--navy);margin:0 0 6px}
   .modal__lead{color:#5c6b7b;margin:0 0 20px;font-size:.98rem;line-height:1.6}
@@ -462,14 +472,22 @@
   .modal .form-success.show{display:block}
   body.modal-open{overflow:hidden}
   @media (max-width:760px){
-    .modal{padding:0;place-items:stretch}
-    .modal__dialog{grid-template-columns:1fr;width:100%;max-height:100dvh;border-radius:0;transform:translateY(26px)}
-    .modal__aside{padding:48px 24px 22px}
-    .modal__aside h3{font-size:1.32rem;margin-bottom:14px}
-    .modal__bul{flex-direction:row;flex-wrap:wrap;gap:8px 18px;margin-bottom:4px}
-    .modal__bul li{font-size:.86rem;padding-inline-start:26px}
-    .modal__since{display:none}
-    .modal__x{background:rgba(0,0,0,.2)}
+    .modal{padding:0;place-items:end}
+    .modal__dialog{grid-template-columns:1fr;width:100%;max-height:100dvh;border-radius:20px 20px 0 0;transform:translateY(100%)}
+    .modal.open .modal__dialog{transform:none}
+    .modal__aside{padding:24px 22px 16px}
+    .modal__aside::before{width:200px;height:200px;inset-block-start:-104px;inset-inline-start:-72px;filter:blur(6px)}
+    .modal__aside-eyebrow{margin-bottom:8px}
+    .modal__aside h3{font-size:1.18rem;margin-bottom:0;text-wrap:balance}
+    .modal__bul,.modal__since{display:none}
+    .modal__x{inset-block-start:12px;inset-inline-end:12px;background:rgba(255,255,255,.2)}
+    .modal__main{padding:18px 22px 22px}
+    .modal__main h3{font-size:1.22rem}
+    .modal__lead{margin:0 0 14px;font-size:.92rem}
+    .modal__main .field{margin-bottom:12px}
+    .modal__main .field input,.modal__main .field textarea{padding:11px 14px}
+    .modal__main .field textarea{min-height:58px}
+    .modal__main .consent{margin-bottom:14px}
   }
 </style>
 </head>
@@ -478,7 +496,7 @@
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="מקור הטבע - לדף הבית"><img src="assets/logo.png" alt="מקור הטבע - מערכות סולאריות מרכזיות" width="152" height="50" /></a>
+    <a class="brand" href="#top" aria-label="מקור הטבע - לדף הבית"><img src="assets/logo-white.png" alt="מקור הטבע - מערכות סולאריות מרכזיות" width="138" height="50" /></a>
     <nav class="nav" aria-label="ניווט ראשי">
       <a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a>
     </nav>
@@ -495,7 +513,7 @@
     <button class="mnav__close" id="mnavClose" aria-label="סגרו תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <a href="#services">השירותים שלנו</a><a href="#why">למה אנחנו</a><a href="#system">איך זה עובד</a><a href="#faq">שאלות נפוצות</a><a href="#contact">צרו קשר</a>
     <a class="btn btn-primary" href="#contact" data-book>קבלו ייעוץ חינם</a>
-    <a class="header-phone ltr" style="color:#fff;margin-top:8px;padding:12px" href="tel:+972544802380">054-480-2380</a>
+    <a class="btn btn-ghost mnav__phone" href="tel:+972544802380" aria-label="התקשרו 054-480-2380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="ltr">054-480-2380</span></a>
   </div>
 </div>
 
@@ -514,7 +532,7 @@
       <p class="hero__sub">תכנון, הקמה, שיקום ותחזוקה של מערכות סולאריות מרכזיות לחימום מים בבתים משותפים - בסטנדרט הנדסי גבוה, באחריות מלאה, ובשירות שלא נגמר ביום&nbsp;ההתקנה.</p>
       <div class="hero__actions">
         <a class="btn btn-primary" href="#contact" data-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>לתיאום ביקור וייעוץ ללא&nbsp;עלות</a>
-        <a class="btn btn-ghost ltr" href="tel:+972544802380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>054-480-2380</a>
+        <a class="btn btn-ghost" href="tel:+972544802380"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="ltr">054-480-2380</span></a>
       </div>
       <div class="hero__stats">
         <div class="stat"><div class="num" data-count="60" data-suffix="+">60+</div><div class="lbl">שנות מומחיות</div></div>
@@ -739,7 +757,7 @@
         <li>הצעה מפורטת וברורה לוועד</li>
         <li>מענה אנושי עוד היום</li>
       </ul>
-      <div class="modal__since">מאז 1963 · מעל 60 שנות ניסיון · אחריות מלאה</div>
+      <div class="modal__since">מאז&nbsp;1963 · מעל 60&nbsp;שנות&nbsp;ניסיון · אחריות&nbsp;מלאה</div>
     </aside>
     <div class="modal__main">
       <h3 id="bookTitle">בקשת ביקור וייעוץ חינם</h3>
@@ -766,6 +784,13 @@
 (function(){
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Prefill a friendly opener on every static WhatsApp link (form-success links get a contextual text on submit)
+  var WA_NUM="972544802380";
+  var WA_MSG="שלום מקור הטבע, הגעתי דרך האתר ואשמח לקבל ייעוץ בנוגע למערכת חימום מים סולארית לבניין שלי.";
+  document.querySelectorAll('a[href^="https://wa.me/'+WA_NUM+'"]').forEach(function(a){
+    if(a.href.indexOf("?text=")===-1){ a.href="https://wa.me/"+WA_NUM+"?text="+encodeURIComponent(WA_MSG); }
+  });
 
   var rays = document.getElementById("sunRays");
   if(rays){ for(var i=0;i<12;i++){ var s=document.createElement("span"); s.style.transform="translate(-50%,-100%) rotate("+(i*30)+"deg)"; rays.appendChild(s); } }
