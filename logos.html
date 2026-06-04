@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>מקור הטבע | כיווני מותג ולוגו</title>
+<meta name="description" content="כיווני עיצוב לוגו ומותג חדשים למקור הטבע - בחירת כיוון, ומכאן בונים את כל השאר." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta name="theme-color" content="#002F5E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Suez+One&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#002F5E; --navy-deep:#001B38; --navy-700:#0A3A6B;
+    --blue:#0077C0; --orange:#FF6000; --amber:#FFB23E;
+    --surface:#F6F8FB; --surface-2:#EAF0F6; --ink:#0E1C28; --muted:#586a7a;
+    --line:#DBE3EC; --white:#fff;
+    --shadow-sm:0 2px 12px rgba(8,30,55,.07);
+    --shadow-md:0 18px 50px rgba(8,30,55,.14);
+    --shadow-lg:0 34px 80px rgba(6,24,48,.30);
+    --r:18px; --r-sm:12px; --container:1180px;
+    --pad-inline:clamp(18px,5vw,64px);
+    --display:"Suez One",Georgia,serif; --body:"Heebo",-apple-system,"Segoe UI",sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html,body{overflow-x:clip;max-width:100%}
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--surface);font-size:18px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.14;letter-spacing:-.005em;text-wrap:balance}
+  p{margin:0;text-wrap:pretty}
+  .wrap{max-width:var(--container);margin-inline:auto;padding-inline:var(--pad-inline)}
+  .ltr{direction:ltr;unicode-bidi:isolate}
+
+  /* top bar */
+  header.bar{position:sticky;top:0;z-index:20;background:rgba(0,47,94,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  header.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  header.bar .brand{font-family:var(--display);color:#fff;font-size:21px}
+  header.bar .brand b{color:var(--amber);font-family:var(--body);font-weight:800}
+  header.bar .tag{color:#cdddf0;font-size:13px;letter-spacing:.02em}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#eaf2fb;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset-block:-40% auto;inset-inline-start:-10%;width:min(560px,60vw);aspect-ratio:1;
+    background:radial-gradient(circle,rgba(255,178,62,.22),rgba(255,178,62,0) 62%);filter:blur(10px);pointer-events:none}
+  .hero .wrap{position:relative;padding-block:clamp(56px,9vw,104px) clamp(48px,7vw,88px)}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:700;font-size:13.5px;
+    letter-spacing:.16em;color:var(--amber);text-transform:none;margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--amber);border-radius:2px}
+  .hero h1{font-size:clamp(38px,7vw,76px);color:#fff;line-height:1.05}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p.lead{margin-top:22px;max-width:48ch;font-size:clamp(17px,2.3vw,21px);color:#c7d8ec}
+  .hero .note{margin-top:30px;display:inline-flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 18px;max-width:54ch;font-size:15.5px;color:#dce8f6}
+  .hero .note span{color:var(--amber);font-weight:800}
+
+  section{padding-block:clamp(46px,7vw,84px)}
+  .sec-head{max-width:62ch;margin-bottom:clamp(26px,4vw,46px)}
+  .sec-head .k{font-family:var(--body);font-weight:800;letter-spacing:.14em;font-size:12.5px;color:var(--orange);margin-bottom:12px}
+  .sec-head h2{font-size:clamp(27px,4.4vw,44px);color:var(--navy)}
+  .sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+
+  /* lead direction */
+  .lead-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-md);overflow:hidden}
+  .lead-grid{display:grid;grid-template-columns:1.25fr .9fr;min-height:340px}
+  .lead-art{display:grid;place-items:center;padding:clamp(26px,5vw,60px);
+    background:
+      radial-gradient(120% 120% at 80% 0,#fff 0,#fbfdff 50%,#f3f7fc 100%);
+    border-inline-start:1px solid var(--line)}
+  .lead-art img{width:min(440px,90%)}
+  .lead-info{padding:clamp(26px,4vw,46px);display:flex;flex-direction:column;justify-content:center;gap:14px}
+  .badge{align-self:flex-start;background:var(--amber);color:var(--navy);font-weight:800;font-size:12.5px;letter-spacing:.04em;
+    padding:6px 13px;border-radius:999px}
+  .lead-info h3{font-size:clamp(24px,3.4vw,34px);color:var(--navy)}
+  .lead-info p{color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{font-size:13px;font-weight:600;color:var(--navy-700);background:var(--surface-2);border:1px solid var(--line);
+    border-radius:999px;padding:6px 12px}
+
+  /* directions grid */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,26px)}
+  .dir{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);overflow:hidden;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;display:flex;flex-direction:column}
+  .dir:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+  .dir .art{aspect-ratio:16/9;display:grid;place-items:center;padding:26px 30px;
+    background:linear-gradient(180deg,#fff,#f6f9fd)}
+  .dir .art img{width:min(380px,92%)}
+  .dir .meta{padding:16px 22px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+  .dir .meta .n{font-family:var(--body);font-weight:800;color:var(--orange);font-size:12.5px;letter-spacing:.1em}
+  .dir .meta h4{margin:0;font-family:var(--body);font-weight:800;font-size:18px;color:var(--navy)}
+  .dir .meta p{color:var(--muted);font-size:14.5px;line-height:1.55}
+
+  /* slogans */
+  .slogan-band{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);
+    padding:clamp(24px,4vw,44px)}
+  .slogan-top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:space-between;margin-bottom:26px}
+  .slogan-top img{width:min(360px,80%)}
+  .slogan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .slogan{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px}
+  .slogan .num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;font-weight:800;
+    display:grid;place-items:center;font-size:15px}
+  .slogan .he{font-family:var(--display);font-size:clamp(18px,2.4vw,23px);color:var(--navy)}
+  .slogan.rec{border-color:var(--amber);background:linear-gradient(180deg,#fffaf0,#fff)}
+  .slogan.rec .num{background:var(--amber);color:var(--navy)}
+  .slogan .pill{margin-inline-start:auto;font-size:11.5px;font-weight:800;color:var(--navy);background:var(--amber);
+    border-radius:999px;padding:4px 10px}
+
+  /* how it lives */
+  .lives{display:grid;grid-template-columns:1.3fr .8fr;gap:clamp(16px,2.4vw,26px)}
+  .live-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:#fff}
+  .live-head{background:rgba(246,248,251,.85);backdrop-filter:blur(8px);padding:14px 22px;display:flex;align-items:center;
+    justify-content:space-between;border-bottom:1px solid var(--line)}
+  .live-head .ttl{color:var(--muted);font-size:13px;letter-spacing:.04em}
+  .live-head img{height:40px;width:auto}
+  .live-body{padding:26px;color:var(--muted);font-size:15px;background:linear-gradient(180deg,#fff,#f6f9fd);min-height:150px;
+    display:flex;align-items:flex-end}
+  .fav{display:grid;place-items:center;gap:16px;padding:30px;background:linear-gradient(160deg,#fff,#eef3f9)}
+  .fav .tabrow{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:9px 14px;box-shadow:var(--shadow-sm)}
+  .fav .tabrow img{width:22px;height:22px}
+  .fav .tabrow span{font-size:13.5px;color:var(--ink);font-weight:600}
+  .fav small{color:var(--muted)}
+
+  /* footer */
+  footer{background:var(--navy-deep);color:#aebfd4;padding-block:34px;margin-top:24px}
+  footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+  footer .b{font-family:var(--display);color:#fff;font-size:20px}
+  footer a{color:#cfe0f3;font-weight:700}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.dir{transition:none}}
+
+  @media (max-width:860px){
+    .lead-grid{grid-template-columns:1fr}
+    .lead-art{border-inline-start:none;border-top:1px solid var(--line);order:-1}
+    .grid{grid-template-columns:1fr}
+    .slogan-list{grid-template-columns:1fr}
+    .lives{grid-template-columns:1fr}
+    header.bar .tag{display:none}
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="brand">מקור<b> </b>הטבע</div>
+    <div class="tag">כיווני מותג · 2026</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">עיצוב מותג חדש</div>
+    <h1>המותג.<br><em>עשר שנים קדימה.</em></h1>
+    <p class="lead">בחרנו להתחיל מהיסוד - מהלוגו. כיוון מודרני ונקי שמספר את הסיפור של מקור הטבע: חום סולארי, מים זורמים, ובית. נבחר כיוון אחד, ומכאן נבנה את כל השאר.</p>
+    <div class="note"><span>איך לקרוא את העמוד:</span> לכל כיוון יש אופי משלו. אין צורך לאהוב את כולם - מספיק לסמן את הכיוון שמדבר אליך, ואת הסלוגן המועדף. נלטש את הנבחר עד לשלמות.</div>
+  </div>
+</section>
+
+<!-- LEAD DIRECTION -->
+<section>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">הכיוון המוביל</div>
+      <h2>טיפה עם שמש</h2>
+      <p>טיפת מים עם שמש חמה בליבה - כל מה שמקור הטבע עושה, בסימן אחד. מינימלי, מודרני, ונקרא מצוין גם בפאביקון הקטן. זה הכיוון שאנחנו ממליצים להוביל איתו.</p>
+    </div>
+    <div class="lead-card rv">
+      <div class="lead-grid">
+        <div class="lead-info">
+          <div class="badge">מומלץ להוביל</div>
+          <h3>נקי. עכשווי. שלנו.</h3>
+          <p>צבע מוביל אחד (כחול עומק) ונגיעת חום אחת (ענבר-כתום). בלי שמש משוננת, בלי קלישאות - מותג שמרגיש 2026.</p>
+          <div class="chips">
+            <span class="chip">כחול עומק #002F5E</span>
+            <span class="chip">ענבר-כתום</span>
+            <span class="chip">לוקאפ רחב</span>
+            <span class="chip">קריא בפאביקון</span>
+          </div>
+        </div>
+        <div class="lead-art"><img id="leadImg" src="" alt="כיוון מוביל - לולאת הזרימה" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTIONS -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">כל הכיוונים</div>
+      <h2>שישה כיוונים, שפה אחת</h2>
+      <p>אותה פלטה ואותו אופי - כל אחד מספר את הסיפור קצת אחרת. סמן את זה שהכי מדבר אליך.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- SLOGANS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">הסלוגן</div>
+      <h2>איזה משפט נושאים מתחת לשם</h2>
+      <p>הסלוגן יושב מתחת לשם המותג. בחר את המשפט שהכי נכון למקור הטבע - אפשר גם לנסח יחד משפט חדש.</p>
+    </div>
+    <div class="slogan-band rv">
+      <div class="slogan-top">
+        <img id="sloganImg" src="" alt="לוגו מקור הטבע עם סלוגן" />
+        <p style="color:var(--muted);max-width:30ch;font-size:15px">כל הסלוגנים נכתבים בעברית נקייה מתחת לשם, באותו כיוון נבחר.</p>
+      </div>
+      <div class="slogan-list">
+        <div class="slogan rec"><span class="num">1</span><span class="he">מהשמש אל הבית · מאז 1963</span><span class="pill">מומלץ</span></div>
+        <div class="slogan"><span class="num">2</span><span class="he">מומחים לחימום מים סולארי</span></div>
+        <div class="slogan"><span class="num">3</span><span class="he">אנרגיה סולארית מאז 1963</span></div>
+        <div class="slogan"><span class="num">4</span><span class="he">מים חמים מהשמש · מאז 1963</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT LIVES -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">איך זה חי</div>
+      <h2>אותו לוגו, בכל מקום</h2>
+      <p>הלוגו הנבחר עובד בכותרת האתר, בפאביקון בכרטיסייה, על מסמכים ועל רכב השירות - בלי לאבד חדות.</p>
+    </div>
+    <div class="lives rv">
+      <div class="live-card">
+        <div class="live-head"><img id="liveHeadImg" src="" alt="לוגו בכותרת" /><span class="ttl">תפריט · יצירת קשר</span></div>
+        <div class="live-body">הלוגו הרחב יושב נקי בראש האתר, בצד ימין, עם תפריט וכפתור יצירת קשר.</div>
+      </div>
+      <div class="live-card fav">
+        <div class="tabrow"><img id="favImg" src="assets/favicon-32.png" alt="פאביקון" /><span>מקור הטבע</span></div>
+        <small>פאביקון בכרטיסיית הדפדפן</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="b">מקור הטבע · מאז 1963</div>
+    <div>לתיאום שיחה: <a class="ltr" href="tel:+972544802380">054-480-2380</a></div>
+  </div>
+</footer>
+
+<script>
+  // Curated directions - finalized after image QA. {file,title,idea,lead}
+  const DIRECTIONS = [
+    {file:"droplet-sun",   title:"טיפה עם שמש",   idea:"טיפת מים עם שמש חמה בליבה - חימום מים סולארי במבט אחד. נקי ומדויק.", lead:true},
+    {file:"sun-horizon",   title:"שמש על הבית",   idea:"שמש גיאומטרית נקייה מעל קו גג ומים. חם, ביתי, ולא קלישאתי."},
+    {file:"loop-refined",  title:"לולאת הזרימה",  idea:"טבעת סגורה - השמש מחממת, המים זורמים וחוזרים. איקוני וטכני."},
+    {file:"heat-ripples",  title:"גלי החום",      idea:"קשתות מתפשטות - חום ואדוות מים שיוצאים החוצה. מופשט ומודרני."},
+    {file:"flow-swoosh",   title:"גל הזרימה",     idea:"קו אחד רציף מענבר לכחול - מים חמים בתנועה."},
+    {file:"collector-lines",title:"הקולט",        idea:"קווי קולט שמש על הגג עם זוהר ענבר - רמז ישיר למוצר."},
+  ];
+  const BRAND = "assets/brand/";
+  const lead = DIRECTIONS.find(d=>d.lead) || DIRECTIONS[0];
+  document.getElementById("leadImg").src   = BRAND+lead.file+".png";
+  document.getElementById("sloganImg").src = BRAND+lead.file+".png";
+  document.getElementById("liveHeadImg").src = BRAND+lead.file+".png";
+
+  const grid = document.getElementById("grid");
+  DIRECTIONS.forEach((d,i)=>{
+    const el = document.createElement("article");
+    el.className="dir rv";
+    el.innerHTML =
+      '<div class="art"><img loading="lazy" src="'+BRAND+d.file+'.png" alt="'+d.title+'" /></div>'+
+      '<div class="meta"><span class="n">כיוון '+String(i+1).padStart(2,"0")+'</span>'+
+      '<h4>'+d.title+'</h4><p>'+d.idea+'</p></div>';
+    grid.appendChild(el);
+  });
+
+  // fallback: hide the dark-header logo if no white knockout exists yet
+  const lh = document.getElementById("liveHeadImg");
+  lh.addEventListener("error",()=>{ lh.style.display="none"; });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} }),{threshold:.12});
+  document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
