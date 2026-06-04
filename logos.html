@@ -288,15 +288,21 @@
   const lh = document.getElementById("liveHeadImg");
   lh.addEventListener("error",()=>{ lh.style.display="none"; });
 
-  // reveal on scroll - threshold 0 so tall sections always trigger; never leave content hidden
-  if ("IntersectionObserver" in window){
-    const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} }),{threshold:0,rootMargin:"0px 0px -6% 0px"});
-    document.querySelectorAll(".rv").forEach(el=>io.observe(el));
-    // safety net: reveal anything near/above the fold that didn't fire within 1.4s
-    setTimeout(()=>document.querySelectorAll(".rv:not(.in)").forEach(el=>{ if(el.getBoundingClientRect().top < innerHeight*1.25) el.classList.add("in"); }),1400);
-  } else {
-    document.querySelectorAll(".rv").forEach(el=>el.classList.add("in"));
+  // reveal on scroll - robust manual handler (fires on every real scroll; never leaves content hidden)
+  let rvEls = [...document.querySelectorAll(".rv")];
+  function revealCheck(){
+    const vh = window.innerHeight;
+    rvEls = rvEls.filter(el=>{
+      if (el.getBoundingClientRect().top < vh*0.92){ el.classList.add("in"); return false; }
+      return true;
+    });
   }
+  let ticking=false;
+  addEventListener("scroll",()=>{ if(!ticking){ ticking=true; requestAnimationFrame(()=>{ revealCheck(); ticking=false; }); } }, {passive:true});
+  addEventListener("resize", revealCheck, {passive:true});
+  revealCheck();
+  // safety net: reveal anything still hidden 3s after load so nothing is ever permanently invisible
+  addEventListener("load", ()=>{ revealCheck(); setTimeout(()=>{ rvEls.forEach(el=>el.classList.add("in")); rvEls=[]; }, 3000); });
 </script>
 </body>
 </html>
