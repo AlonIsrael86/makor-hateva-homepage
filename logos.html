@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.className+=" js";</script>
 <title>מקור הטבע | כיווני מותג ולוגו</title>
 <meta name="description" content="כיווני עיצוב לוגו ומותג חדשים למקור הטבע - בחירת כיוון, ומכאן בונים את כל השאר." />
 <meta name="robots" content="noindex, nofollow" />
@@ -55,15 +56,16 @@
   .hero h1{font-size:clamp(38px,7vw,76px);color:#fff;line-height:1.05}
   .hero h1 em{font-style:normal;color:var(--amber)}
   .hero p.lead{margin-top:22px;max-width:48ch;font-size:clamp(17px,2.3vw,21px);color:#c7d8ec}
-  .hero .note{margin-top:30px;display:inline-flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 18px;max-width:54ch;font-size:15.5px;color:#dce8f6}
+  .hero .note{margin-top:30px;display:block;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 18px;max-width:54ch;font-size:15.5px;color:#dce8f6;
+    text-wrap:pretty}
   .hero .note span{color:var(--amber);font-weight:800}
 
   section{padding-block:clamp(46px,7vw,84px)}
   .sec-head{max-width:62ch;margin-bottom:clamp(26px,4vw,46px)}
   .sec-head .k{font-family:var(--body);font-weight:800;letter-spacing:.14em;font-size:12.5px;color:var(--orange);margin-bottom:12px}
   .sec-head h2{font-size:clamp(27px,4.4vw,44px);color:var(--navy)}
-  .sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+  .sec-head p{margin-top:14px;color:var(--muted);font-size:17px;text-wrap:balance}
 
   /* lead direction */
   .lead-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-md);overflow:hidden}
@@ -77,7 +79,7 @@
   .badge{align-self:flex-start;background:var(--amber);color:var(--navy);font-weight:800;font-size:12.5px;letter-spacing:.04em;
     padding:6px 13px;border-radius:999px}
   .lead-info h3{font-size:clamp(24px,3.4vw,34px);color:var(--navy)}
-  .lead-info p{color:var(--muted)}
+  .lead-info p{color:var(--muted);text-wrap:balance}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
   .chip{font-size:13px;font-weight:600;color:var(--navy-700);background:var(--surface-2);border:1px solid var(--line);
     border-radius:999px;padding:6px 12px}
@@ -93,7 +95,7 @@
   .dir .meta{padding:16px 22px 22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
   .dir .meta .n{font-family:var(--body);font-weight:800;color:var(--orange);font-size:12.5px;letter-spacing:.1em}
   .dir .meta h4{margin:0;font-family:var(--body);font-weight:800;font-size:18px;color:var(--navy)}
-  .dir .meta p{color:var(--muted);font-size:14.5px;line-height:1.55}
+  .dir .meta p{color:var(--muted);font-size:14.5px;line-height:1.55;text-wrap:balance}
 
   /* slogans */
   .slogan-band{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);
@@ -105,7 +107,7 @@
     padding:16px 20px}
   .slogan .num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;font-weight:800;
     display:grid;place-items:center;font-size:15px}
-  .slogan .he{font-family:var(--display);font-size:clamp(18px,2.4vw,23px);color:var(--navy)}
+  .slogan .he{font-family:var(--display);font-size:clamp(16px,2vw,21px);color:var(--navy);text-wrap:balance}
   .slogan.rec{border-color:var(--amber);background:linear-gradient(180deg,#fffaf0,#fff)}
   .slogan.rec .num{background:var(--amber);color:var(--navy)}
   .slogan .pill{margin-inline-start:auto;font-size:11.5px;font-weight:800;color:var(--navy);background:var(--amber);
@@ -133,10 +135,10 @@
   footer .b{font-family:var(--display);color:#fff;font-size:20px}
   footer a{color:#cfe0f3;font-weight:700}
 
-  /* reveal */
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-  .rv.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.dir{transition:none}}
+  /* reveal - JS-gated: visible by default, animated only when JS is active */
+  .js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.dir{transition:none}}
 
   @media (max-width:860px){
     .lead-grid{grid-template-columns:1fr}
@@ -218,10 +220,10 @@
         <p style="color:var(--muted);max-width:30ch;font-size:15px">כל הסלוגנים נכתבים בעברית נקייה מתחת לשם, באותו כיוון נבחר.</p>
       </div>
       <div class="slogan-list">
-        <div class="slogan rec"><span class="num">1</span><span class="he">מהשמש אל הבית · מאז 1963</span><span class="pill">מומלץ</span></div>
-        <div class="slogan"><span class="num">2</span><span class="he">מומחים לחימום מים סולארי</span></div>
-        <div class="slogan"><span class="num">3</span><span class="he">אנרגיה סולארית מאז 1963</span></div>
-        <div class="slogan"><span class="num">4</span><span class="he">מים חמים מהשמש · מאז 1963</span></div>
+        <div class="slogan rec"><span class="num">1</span><span class="he">מהשמש אל הבית&nbsp;· מאז&nbsp;1963</span><span class="pill">מומלץ</span></div>
+        <div class="slogan"><span class="num">2</span><span class="he">מומחים לחימום מים&nbsp;סולארי</span></div>
+        <div class="slogan"><span class="num">3</span><span class="he">אנרגיה סולארית מאז&nbsp;1963</span></div>
+        <div class="slogan"><span class="num">4</span><span class="he">מים חמים מהשמש&nbsp;· מאז&nbsp;1963</span></div>
       </div>
     </div>
   </div>
@@ -286,9 +288,15 @@
   const lh = document.getElementById("liveHeadImg");
   lh.addEventListener("error",()=>{ lh.style.display="none"; });
 
-  // reveal on scroll
-  const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} }),{threshold:.12});
-  document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+  // reveal on scroll - threshold 0 so tall sections always trigger; never leave content hidden
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);} }),{threshold:0,rootMargin:"0px 0px -6% 0px"});
+    document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+    // safety net: reveal anything near/above the fold that didn't fire within 1.4s
+    setTimeout(()=>document.querySelectorAll(".rv:not(.in)").forEach(el=>{ if(el.getBoundingClientRect().top < innerHeight*1.25) el.classList.add("in"); }),1400);
+  } else {
+    document.querySelectorAll(".rv").forEach(el=>el.classList.add("in"));
+  }
 </script>
 </body>
 </html>
