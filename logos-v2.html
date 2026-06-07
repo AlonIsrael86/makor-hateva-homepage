@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>מקור הטבע · כיווני מותג חדשים</title>
+<meta name="description" content="כיווני לוגו ומותג חדשים, מודרניים ונקיים — חימום מים סולארי. בוחרים כיוון, ומשם בונים את האתר." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --teal:#0CA3AF; --teal-deep:#0A7C86; --teal-soft:#5CC6CF;
+    --sun:#FFB12E; --sun-deep:#FF8A1F;
+    --ink:#0E2A2E; --muted:#5C7479; --line:#E4EFF0;
+    --surface:#F3FBFC; --white:#fff; --dark:#0B2B30; --dark-2:#0E373D;
+    --display:"Rubik",system-ui,sans-serif; --body:"Heebo",system-ui,sans-serif;
+    --pad:clamp(20px,5vw,64px);
+    --r:18px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--white);color:var(--ink);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin-inline:auto;padding-inline:var(--pad)}
+  h1,h2,h3{font-family:var(--display);line-height:1.15;font-weight:700;letter-spacing:-0.01em}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);padding:7px 15px;border-radius:999px}
+  .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--sun)}
+
+  /* HERO */
+  header.hero{padding-block:clamp(54px,8vw,96px) clamp(34px,5vw,56px);background:
+     radial-gradient(120% 90% at 90% -10%, #EAFBFC 0%, transparent 55%),
+     var(--white)}
+  header.hero h1{font-size:clamp(34px,6vw,60px);font-weight:800;margin-block:18px 14px;max-width:14ch}
+  header.hero h1 b{color:var(--teal-deep);font-weight:800}
+  header.hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:60ch}
+  .why{margin-top:30px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .why .item{border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;background:var(--white)}
+  .why .item h3{font-size:16px;font-weight:700;margin-bottom:5px;color:var(--ink)}
+  .why .item p{font-size:14.5px;color:var(--muted);line-height:1.6}
+
+  /* FOUNDATION (palette + type) */
+  .foundation{padding-block:clamp(30px,5vw,52px)}
+  .foundation .grid{display:grid;gap:22px;grid-template-columns:1.1fr 1fr;align-items:stretch}
+  @media(max-width:760px){.foundation .grid{grid-template-columns:1fr}}
+  .panel{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--white)}
+  .panel h3{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:16px;letter-spacing:.01em}
+  .swatches{display:flex;flex-wrap:wrap;gap:12px}
+  .sw{width:74px}
+  .sw .chip{height:54px;border-radius:12px;border:1px solid rgba(14,42,46,.06)}
+  .sw span{display:block;font-size:11.5px;color:var(--muted);margin-top:7px;font-family:var(--display)}
+  .typ .big{font-family:var(--display);font-weight:800;font-size:40px;color:var(--ink);line-height:1.1}
+  .typ .row{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+  .typ .row b{font-family:var(--display);font-weight:600;font-size:15px;color:var(--teal-deep);min-width:104px}
+  .typ .row span{color:var(--muted);font-size:15px}
+
+  /* CONCEPTS */
+  .concepts{padding-block:clamp(20px,4vw,40px) clamp(50px,8vw,90px)}
+  .concept{border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:30px;background:var(--white)}
+  .concept .head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:24px clamp(22px,4vw,34px) 6px;flex-wrap:wrap}
+  .concept .head .t .n{font-family:var(--display);font-weight:700;font-size:13px;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:3px 9px;display:inline-block;margin-bottom:9px}
+  .concept .head .t h2{font-size:clamp(22px,3.4vw,30px);font-weight:800}
+  .concept .head .t p{color:var(--muted);max-width:54ch;margin-top:6px;font-size:15.5px}
+  .stage{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:680px){.stage{grid-template-columns:1fr}}
+  .cell{padding:clamp(26px,4vw,46px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;min-height:230px}
+  .cell.light{background:
+     radial-gradient(90% 80% at 50% 0%, #F7FDFD, var(--white));border-inline-start:1px solid var(--line)}
+  .cell.dark{background:radial-gradient(100% 90% at 50% 0%, var(--dark-2), var(--dark));color:#fff}
+  @media(max-width:680px){.cell.light{border-inline-start:none;border-top:1px solid var(--line)}}
+  .cell .label{font-size:12px;font-family:var(--display);font-weight:500;letter-spacing:.02em}
+  .cell.light .label{color:var(--muted)}
+  .cell.dark .label{color:#9FC7CB}
+  .lockup{display:flex;align-items:center;gap:16px}
+  .lockup .mk{width:clamp(58px,9vw,76px);height:clamp(58px,9vw,76px);flex:none}
+  .lockup .wm{display:flex;flex-direction:column;line-height:1}
+  .lockup .wm .name{font-family:var(--display);font-weight:800;font-size:clamp(26px,4.4vw,36px);letter-spacing:-.01em}
+  .lockup .wm .tag{font-family:var(--display);font-weight:500;font-size:clamp(11px,1.7vw,13.5px);margin-top:7px;letter-spacing:.04em}
+  .cell.light .wm .name{color:var(--ink)} .cell.light .wm .tag{color:var(--teal-deep)}
+  .cell.dark .wm .name{color:#fff} .cell.dark .wm .tag{color:var(--sun)}
+  .mini{display:flex;align-items:center;gap:14px;margin-top:2px}
+  .mini .fav{width:30px;height:30px;border-radius:8px;flex:none;display:grid;place-items:center;border:1px solid var(--line);background:#fff}
+  .mini .fav.dark{background:var(--dark);border-color:#16484f}
+  .mini .fav svg{width:20px;height:20px}
+  .mini small{font-size:11.5px;color:var(--muted)}
+  .cell.dark .mini small{color:#9FC7CB}
+
+  /* SLOGANS */
+  .slogans{padding-block:clamp(20px,4vw,36px) clamp(54px,8vw,90px)}
+  .slogans .list{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:22px}
+  .slogans .s{border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;background:var(--white)}
+  .slogans .s .he{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink)}
+  .slogans .s .note{font-size:13.5px;color:var(--muted);margin-top:7px}
+
+  footer{background:var(--dark);color:#cfe6e8;padding-block:40px;text-align:center}
+  footer .wrap{display:flex;flex-direction:column;gap:8px;align-items:center}
+  footer b{color:#fff;font-family:var(--display)}
+  footer small{color:#7FAAB0;font-size:13px;max-width:62ch}
+
+  .sectionhead{max-width:60ch}
+  .sectionhead h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;margin-bottom:8px}
+  .sectionhead p{color:var(--muted)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .sun-pulse{transform-box:fill-box;transform-origin:center;animation:sp 4.5s ease-in-out infinite}
+    @keyframes sp{0%,100%{opacity:1}50%{opacity:.82}}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker"><span class="dot"></span>מקור הטבע · כיווני מותג</span>
+    <h1>נקודת פתיחה חדשה. <b>קדימה, לא אחורה.</b></h1>
+    <p class="lead">ארבעה כיווני לוגו חדשים — מודרניים, נקיים, ובשפה צעירה. כולם נבנו סביב רעיון אחד: השמש שמחממת את המים בבית שלך. בוחרים כיוון אחד, ומשם בונים את כל האתר.</p>
+    <div class="why">
+      <div class="item"><h3>שפה עכשווית</h3><p>טורקיז נקי של מים + שמש חמה. בלי הכבדות, בלי "ותיק ומיושן".</p></div>
+      <div class="item"><h3>רעיון אחד ברור</h3><p>שמש ↔ מים ↔ חום. כל סימן מספר את אותו סיפור בצורה אחרת.</p></div>
+      <div class="item"><h3>עובד בכל גודל</h3><p>מהשלט על הרכב ועד אייקון קטן בנייד. נקי גם ב‑30 פיקסל.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="foundation">
+  <div class="wrap">
+    <div class="grid">
+      <div class="panel">
+        <h3>פלטת הצבעים החדשה</h3>
+        <div class="swatches">
+          <div class="sw"><div class="chip" style="background:#0CA3AF"></div><span>טורקיז</span></div>
+          <div class="sw"><div class="chip" style="background:#0A7C86"></div><span>טורקיז עמוק</span></div>
+          <div class="sw"><div class="chip" style="background:#FFB12E"></div><span>שמש</span></div>
+          <div class="sw"><div class="chip" style="background:#FF8A1F"></div><span>שמש חמה</span></div>
+          <div class="sw"><div class="chip" style="background:#0E2A2E"></div><span>דיו</span></div>
+          <div class="sw"><div class="chip" style="background:#F3FBFC"></div><span>רקע נקי</span></div>
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin-top:18px;line-height:1.6">טורקיז = המים והאמינות. שמש = האנרגיה והחום. שני צבעים, סיפור אחד.</p>
+      </div>
+      <div class="panel typ">
+        <h3>הטיפוגרפיה</h3>
+        <div class="big">מקור הטבע</div>
+        <div class="row"><b>Rubik</b><span>כותרות — גיאומטרי, נקי, מודרני</span></div>
+        <div class="row"><b>Heebo</b><span>טקסט גוף — קריא, רגוע, מקצועי</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="concepts">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>ארבעת הכיוונים</h2>
+      <p>כל כיוון מוצג על רקע בהיר וכהה, עם גרסת אייקון קטן (favicon). זה מה שנעבור עליו יחד.</p>
+    </div>
+
+    <!-- ============ CONCEPT 1 — RADIANT SOURCE ============ -->
+    <article class="concept">
+      <div class="head"><div class="t"><span class="n">כיוון 01</span><h2>מקור קורן</h2>
+        <p>שמש זהובה במרכז, וגלי מים מתפשטים ממנה החוצה. "מקור" שמקרין אנרגיה — נקי, סימטרי, קל לזיהוי.</p></div></div>
+      <div class="stage">
+        <div class="cell light">
+          <div class="label">על רקע בהיר</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-label="מקור הטבע">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#5CC6CF" stroke-width="7" stroke-linecap="round" stroke-dasharray="216 73" transform="rotate(118 60 60)"/>
+              <circle cx="60" cy="60" r="31" fill="none" stroke="#0CA3AF" stroke-width="7" stroke-linecap="round" stroke-dasharray="146 49" transform="rotate(118 60 60)"/>
+              <circle class="sun-pulse" cx="60" cy="60" r="15" fill="#FFB12E"/>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="44" fill="none" stroke="#0CA3AF" stroke-width="10"/><circle cx="60" cy="60" r="20" fill="#FFB12E"/></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+        <div class="cell dark">
+          <div class="label">על רקע כהה</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="46" fill="none" stroke="#1E6B72" stroke-width="7" stroke-linecap="round" stroke-dasharray="216 73" transform="rotate(118 60 60)"/>
+              <circle cx="60" cy="60" r="31" fill="none" stroke="#2BB7C2" stroke-width="7" stroke-linecap="round" stroke-dasharray="146 49" transform="rotate(118 60 60)"/>
+              <circle class="sun-pulse" cx="60" cy="60" r="15" fill="#FFB12E"/>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav dark"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="44" fill="none" stroke="#2BB7C2" stroke-width="10"/><circle cx="60" cy="60" r="20" fill="#FFB12E"/></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ CONCEPT 2 — SUN-DROP ============ -->
+    <article class="concept">
+      <div class="head"><div class="t"><span class="n">כיוון 02</span><h2>טיפת שמש</h2>
+        <p>טיפת מים, ובתוכה שמש זורחת מעל קו המים. הסימן הכי "ספציפי לתחום": מים + שמש בצורה אחת.</p></div></div>
+      <div class="stage">
+        <div class="cell light">
+          <div class="label">על רקע בהיר</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-label="מקור הטבע">
+              <path d="M60 12 C80 46 92 60 92 76 A32 32 0 1 1 28 76 C28 60 40 46 60 12 Z" fill="#0CA3AF"/>
+              <clipPath id="d2"><path d="M60 12 C80 46 92 60 92 76 A32 32 0 1 1 28 76 C28 60 40 46 60 12 Z"/></clipPath>
+              <g clip-path="url(#d2)">
+                <path class="sun-pulse" d="M44 86 A16 16 0 0 1 76 86 Z" fill="#FFB12E"/>
+                <rect x="22" y="86" width="76" height="3.4" fill="#EAFBFC" opacity=".9"/>
+              </g>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav"><svg viewBox="0 0 120 120"><path d="M60 16 C79 47 90 60 90 75 A30 30 0 1 1 30 75 C30 60 41 47 60 16 Z" fill="#0CA3AF"/><clipPath id="df2"><path d="M60 16 C79 47 90 60 90 75 A30 30 0 1 1 30 75 C30 60 41 47 60 16 Z"/></clipPath><g clip-path="url(#df2)"><path d="M46 84 A14 14 0 0 1 74 84 Z" fill="#FFB12E"/><rect x="24" y="84" width="72" height="3" fill="#EAFBFC"/></g></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+        <div class="cell dark">
+          <div class="label">על רקע כהה</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-hidden="true">
+              <path d="M60 12 C80 46 92 60 92 76 A32 32 0 1 1 28 76 C28 60 40 46 60 12 Z" fill="#0CA3AF"/>
+              <clipPath id="d2d"><path d="M60 12 C80 46 92 60 92 76 A32 32 0 1 1 28 76 C28 60 40 46 60 12 Z"/></clipPath>
+              <g clip-path="url(#d2d)">
+                <path class="sun-pulse" d="M44 86 A16 16 0 0 1 76 86 Z" fill="#FFB12E"/>
+                <rect x="22" y="86" width="76" height="3.4" fill="#0B2B30" opacity=".55"/>
+              </g>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav dark"><svg viewBox="0 0 120 120"><path d="M60 16 C79 47 90 60 90 75 A30 30 0 1 1 30 75 C30 60 41 47 60 16 Z" fill="#2BB7C2"/><clipPath id="df2d"><path d="M60 16 C79 47 90 60 90 75 A30 30 0 1 1 30 75 C30 60 41 47 60 16 Z"/></clipPath><g clip-path="url(#df2d)"><path d="M46 84 A14 14 0 0 1 74 84 Z" fill="#FFB12E"/></g></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ CONCEPT 3 — THERMO LOOP ============ -->
+    <article class="concept">
+      <div class="head"><div class="t"><span class="n">כיוון 03</span><h2>מעגל החום</h2>
+        <p>שמש מחוברת ללולאת זרימה סגורה — בדיוק כמו מערכת סולארית אמיתית. הכי "טכני וקדמי", מתאים גם לוועדי בתים וחברות אחזקה.</p></div></div>
+      <div class="stage">
+        <div class="cell light">
+          <div class="label">על רקע בהיר</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-label="מקור הטבע">
+              <circle cx="60" cy="40" r="19" fill="none" stroke="#0CA3AF" stroke-width="7"/>
+              <circle class="sun-pulse" cx="60" cy="40" r="8.5" fill="#FFB12E"/>
+              <path d="M52 58 V86 a8 8 0 0 0 16 0 V58" fill="none" stroke="#0CA3AF" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav"><svg viewBox="0 0 120 120"><circle cx="60" cy="44" r="20" fill="none" stroke="#0CA3AF" stroke-width="9"/><circle cx="60" cy="44" r="9" fill="#FFB12E"/><path d="M52 64 V84 a8 8 0 0 0 16 0 V64" fill="none" stroke="#0CA3AF" stroke-width="9" stroke-linecap="round"/></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+        <div class="cell dark">
+          <div class="label">על רקע כהה</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="40" r="19" fill="none" stroke="#2BB7C2" stroke-width="7"/>
+              <circle class="sun-pulse" cx="60" cy="40" r="8.5" fill="#FFB12E"/>
+              <path d="M52 58 V86 a8 8 0 0 0 16 0 V58" fill="none" stroke="#2BB7C2" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav dark"><svg viewBox="0 0 120 120"><circle cx="60" cy="44" r="20" fill="none" stroke="#2BB7C2" stroke-width="9"/><circle cx="60" cy="44" r="9" fill="#FFB12E"/><path d="M52 64 V84 a8 8 0 0 0 16 0 V64" fill="none" stroke="#2BB7C2" stroke-width="9" stroke-linecap="round"/></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ CONCEPT 4 — MEM MONOGRAM ============ -->
+    <article class="concept">
+      <div class="head"><div class="t"><span class="n">כיוון 04</span><h2>מונוגרמה — מ' + שמש</h2>
+        <p>האות מ' (מקור) בעיצוב גיאומטרי נקי, עם שמש זהובה זורחת מעליה. סימן‑אות ייחודי וקל לזכירה — מותג, לא סתם אייקון.</p></div></div>
+      <div class="stage">
+        <div class="cell light">
+          <div class="label">על רקע בהיר</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-label="מקור הטבע">
+              <rect x="14" y="14" width="92" height="92" rx="24" fill="#0CA3AF"/>
+              <circle class="sun-pulse" cx="86" cy="38" r="12" fill="#FFB12E"/>
+              <text x="58" y="86" text-anchor="middle" font-family="Rubik,sans-serif" font-weight="800" font-size="66" fill="#fff">מ</text>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav"><svg viewBox="0 0 120 120"><rect x="8" y="8" width="104" height="104" rx="26" fill="#0CA3AF"/><circle cx="88" cy="36" r="13" fill="#FFB12E"/><text x="56" y="90" text-anchor="middle" font-family="Rubik,sans-serif" font-weight="800" font-size="72" fill="#fff">מ</text></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+        <div class="cell dark">
+          <div class="label">על רקע כהה</div>
+          <div class="lockup">
+            <svg class="mk" viewBox="0 0 120 120" aria-hidden="true">
+              <rect x="14" y="14" width="92" height="92" rx="24" fill="none" stroke="#2BB7C2" stroke-width="6"/>
+              <circle class="sun-pulse" cx="86" cy="38" r="12" fill="#FFB12E"/>
+              <text x="58" y="86" text-anchor="middle" font-family="Rubik,sans-serif" font-weight="800" font-size="66" fill="#fff">מ</text>
+            </svg>
+            <div class="wm"><span class="name">מקור הטבע</span><span class="tag">חימום מים סולארי</span></div>
+          </div>
+          <div class="mini"><span class="fav dark"><svg viewBox="0 0 120 120"><rect x="8" y="8" width="104" height="104" rx="26" fill="#0E373D" stroke="#2BB7C2" stroke-width="5"/><circle cx="88" cy="36" r="13" fill="#FFB12E"/><text x="56" y="90" text-anchor="middle" font-family="Rubik,sans-serif" font-weight="800" font-size="72" fill="#fff">מ</text></svg></span><small>אייקון קטן / favicon</small></div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="slogans">
+  <div class="wrap">
+    <div class="sectionhead">
+      <h2>אופציות לסלוגן</h2>
+      <p>נבחר אחד שיישב מתחת ללוגו ובהירו של האתר. כולם מדברים "קדימה", בלי "מאז 1963".</p>
+    </div>
+    <div class="list">
+      <div class="s"><div class="he">חימום מים סולארי</div><div class="note">תיאור נקי וברור. אומר בדיוק מה אנחנו עושים.</div></div>
+      <div class="s"><div class="he">מים חמים. אנרגיה נקייה.</div><div class="note">קצר, מודרני, עם ערך סביבתי.</div></div>
+      <div class="s"><div class="he">השמש עובדת בשבילך</div><div class="note">חם, אנושי, מדבר על החיסכון.</div></div>
+      <div class="s"><div class="he">מקור אחד לכל מערכת חימום מים</div><div class="note">משחק על השם, מתאים לפרטי ולוועדי בתים.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>מקור הטבע · כיווני מותג חדשים</b>
+    <small>בוחרים כיוון לוגו + סלוגן → אני מוקטר אותו ל‑SVG נקי + סט אייקונים → ומשם בונים את כל עמוד הבית סביבו, באותה שפה מודרנית.</small>
+  </div>
+</footer>
+
+</body>
+</html>
